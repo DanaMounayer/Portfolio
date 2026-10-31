@@ -142,36 +142,12 @@ window.PAPERS = [
   }
 ];
 
+/* Skills are drawn as a small neural network: each group is one layer. */
 window.SKILLS = [
-  { group: "Languages", items: [
-    ["Python", "ML, deep learning and big-data projects"],
-    ["C++", "Data structures and algorithms"],
-    ["Java", "Banking system, OOP coursework"],
-    ["JavaScript", "Badira, On The Go, this portfolio"],
-    ["SQL", "Review storage for On The Go"],
-    ["PHP", "On The Go back end"]
-  ]},
-  { group: "Machine learning & data", items: [
-    ["scikit-learn & XGBoost", "Preeclampsia prediction"],
-    ["Feature engineering & ensembles", "Soft-voting ensemble, feature selection"],
-    ["Cross-validation & tuning", "Model evaluation across 3 datasets"],
-    ["PySpark, Spark MLlib & Kafka", "Heart-disease pipeline"],
-    ["Pandas, NumPy, Matplotlib", "Data cleaning and analysis"]
-  ]},
-  { group: "Deep learning & generative AI", items: [
-    ["PyTorch, TensorFlow & Keras", "IBM AI Engineering, Deep Learning course"],
-    ["Transfer learning (CNNs)", "Recycling bin with MobileNetV2"],
-    ["Hugging Face Transformers", "BERT, GPT and LLaMA models"],
-    ["LangChain & RAG", "IBM capstone: a generative AI app"],
-    ["LLM fine-tuning", "IBM AI Engineering"]
-  ]},
-  { group: "Web & tools", items: [
-    ["HTML, CSS & Bootstrap", "Every web project"],
-    ["Git & GitHub", "All projects"],
-    ["Jupyter & Google Colab", "Model training"],
-    ["Claude Code", "Anthropic Academy, day-to-day building"],
-    ["Cisco Packet Tracer", "Campus network design"]
-  ]}
+  { layer: "Input", group: "Languages", items: ["Python", "C++", "Java", "JavaScript", "SQL", "PHP"] },
+  { layer: "Hidden", group: "Machine learning & data", items: ["scikit-learn", "XGBoost", "Feature engineering", "Ensembles", "PySpark", "Kafka", "Pandas & NumPy"] },
+  { layer: "Hidden", group: "Deep learning & generative AI", items: ["PyTorch", "TensorFlow", "Keras", "Transfer learning", "Hugging Face", "LangChain & RAG", "LLM fine-tuning"] },
+  { layer: "Output", group: "Building & tools", items: ["HTML & CSS", "Bootstrap", "Git & GitHub", "Jupyter & Colab", "Claude Code", "Packet Tracer"] }
 ];
 
 /* Coursework, in the order it was taken. "now: true" marks the current semester. */
@@ -202,8 +178,15 @@ window.CERTIFICATES = [
     date: "Oct 2026", verify: "https://coursera.org/verify/professional-cert/K5LST09LIFC3", image: "images/certs/ibm-ai-engineering.webp", featured: true },
   { group: "ai", title: "Neural Networks and Deep Learning", kind: "Course", issuer: "DeepLearning.AI",
     date: "Sep 2026", verify: "https://coursera.org/verify/EW4U8N12C9PZ", image: "images/certs/deeplearning-ai-nn-dl.webp", featured: true },
-  { group: "ai", title: "Anthropic Academy: Claude 101, Claude Code 101, Claude Code in Action, Introduction to Claude Cowork", kind: "4 courses", issuer: "Anthropic",
-    date: "Apr 2026" },
+  { group: "ai", title: "Anthropic Academy", kind: "4 certificates", issuer: "Anthropic",
+    date: "Apr 2026",
+    note: "Claude 101, Claude Code 101, Claude Code in Action, Introduction to Claude Cowork",
+    images: [
+      { src: "images/certs/anthropic-claude-101.webp", caption: "Claude 101" },
+      { src: "images/certs/anthropic-claude-code-101.webp", caption: "Claude Code 101" },
+      { src: "images/certs/anthropic-claude-code-in-action.webp", caption: "Claude Code in Action" },
+      { src: "images/certs/anthropic-intro-claude-cowork.webp", caption: "Introduction to Claude Cowork" }
+    ] },
   { group: "ai", title: "Foundations: Data, Data, Everywhere", kind: "Course", issuer: "Google",
     date: "Sep 2025", verify: "https://coursera.org/verify/W9M9321IR47V", image: "images/certs/google-data-everywhere.webp" },
   { group: "competitions", title: "StartSmart Saudi University Challenge: Certificate of Appreciation (team Badira)", kind: "Competition", issuer: "Community Jameel Saudi & Start Smart Saudi", date: "Nov 2026", featured: true },
@@ -218,7 +201,7 @@ window.CERTIFICATES = [
     date: "Mar 2025", image: "images/certs/mawakeb-alajer-arzaq-2025.webp" }
 ];
 
-/* Experience and volunteering, newest first. "images" is optional (up to 2 photos). */
+/* Work and competitions, newest first. */
 window.EXPERIENCE = [
   {
     date: "Sep–Nov 2026",
@@ -231,35 +214,45 @@ window.EXPERIENCE = [
     role: "Summer camp assistant",
     org: "Manara Sports Academy (MSA) Summer Camp",
     text: "Gave 240 hours helping supervise and run daily sports and recreational activities for children, and received a Certificate of Appreciation."
-  },
+  }
+];
+
+/* Volunteering cards. The first image is the cover; all images open in the viewer. */
+window.VOLUNTEERING = [
   {
-    date: "Ramadan",
-    role: "Volunteer",
-    org: "Subha Community · Social services",
-    text: "Helped organise and distribute iftar meals to people in need, and took part in outreach to support underserved communities.",
-    images: [{ src: "images/experience/subha-community.webp", alt: "The Subha Community volunteer team in blue vests" }]
-  },
-  {
-    date: "Mar 2025",
-    role: "Volunteer",
-    org: "Mawakeb Alajer Endowment",
-    text: "Spent 4 hours 40 minutes at the endowment's headquarters preparing Ramadan food baskets (أرزاق رمضان)."
-  },
-  {
-    date: "Mar 2025",
-    role: "Volunteer",
-    org: "Joy of Youth",
-    text: "Spent 4 hours distributing iftar meals in the 2025 Ramadan campaign (توزيع الفطور).",
-    images: [{ src: "images/experience/joy-of-youth.webp", alt: "Joy of Youth volunteers gathered in front of a bus" }]
-  },
-  {
+    org: "Help Center Company",
+    cause: "Children",
     date: "",
-    role: "Volunteer",
-    org: "Help Center Company · Children",
     text: "Volunteered with the Effat University team at the \u201cLet\u2019s Walk the Walk\u201d marathon, cheering on the young runners along the route.",
     images: [
-      { src: "images/experience/help-center-marathon.webp", alt: "Dana high-fiving a young runner at the marathon" },
-      { src: "images/experience/help-center-team.webp", alt: "The Effat University volunteer team with the university flag" }
+      { src: "images/experience/help-center-marathon.webp", caption: "High-fiving a young runner at the marathon" },
+      { src: "images/experience/help-center-team.webp", caption: "The Effat University volunteer team" }
     ]
+  },
+  {
+    org: "Subha Community",
+    cause: "Social services",
+    date: "Ramadan",
+    text: "Helped organise and distribute iftar meals to people in need, and took part in outreach to underserved communities.",
+    images: [{ src: "images/experience/subha-community.webp", caption: "The Subha Community volunteer team" }]
+  },
+  {
+    org: "Joy of Youth",
+    cause: "Ramadan iftar campaign",
+    date: "Mar 2025",
+    hours: "4 hours",
+    text: "Distributed iftar meals in the 2025 Ramadan campaign (توزيع الفطور).",
+    images: [
+      { src: "images/experience/joy-of-youth.webp", caption: "Joy of Youth volunteers" },
+      { src: "images/certs/joy-of-youth-iftar-2025.webp", caption: "Joy of Youth volunteer certificate" }
+    ]
+  },
+  {
+    org: "Mawakeb Alajer Endowment",
+    cause: "Ramadan food baskets",
+    date: "Mar 2025",
+    hours: "4h 40m",
+    text: "Prepared Ramadan food baskets (أرزاق رمضان) at the endowment's headquarters.",
+    images: [{ src: "images/certs/mawakeb-alajer-arzaq-2025.webp", caption: "Mawakeb Alajer volunteer certificate" }]
   }
 ];
