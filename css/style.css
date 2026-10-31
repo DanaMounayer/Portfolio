@@ -424,7 +424,7 @@ button.cert-thumb.stack:hover .s3 { transform: translateX(6%) rotate(12deg); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .contact-title { color: var(--white); font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 500; letter-spacing: -0.025em; max-width: 14ch; margin-bottom: 1rem; }
 .contact-intro p { color: #cfe0f7; font-size: var(--step-1); max-width: 40ch; }
-.contact-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: .9rem; }
+.contact-tiles { display: grid; grid-template-columns: 1fr; gap: .75rem; }
 .contact-tile {
   display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: .9rem; align-items: center;
   padding: 1rem 1.15rem; border-radius: 14px; text-decoration: none; color: var(--white);
@@ -432,14 +432,10 @@ button.cert-thumb.stack:hover .s3 { transform: translateX(6%) rotate(12deg); }
   transition: background-color .2s, transform .2s, border-color .2s;
 }
 .contact-tile:hover { color: var(--white); background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.35); transform: translateY(-2px); }
-.contact-tile.primary { grid-column: 1 / -1; background: var(--white); color: #0b3d91; border-color: var(--white); padding: 1.25rem 1.4rem; }
-.contact-tile.primary:hover { color: #0b3d91; background: #e8f0fc; }
 .contact-icon { grid-row: 1 / 3; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,255,255,.12); }
-.contact-tile.primary .contact-icon { background: #0b3d91; color: var(--white); }
 .contact-icon svg { width: 22px; height: 22px; }
 .contact-label { font-size: var(--step--1); opacity: .75; font-weight: 600; }
 .contact-value { font-family: var(--display); font-weight: 500; font-size: 1.05rem; overflow-wrap: anywhere; }
-.contact-tile.primary .contact-value { font-size: clamp(1.15rem, 2.4vw, 1.5rem); }
 .contact :focus-visible { outline-color: var(--white); }
 
 .site-footer { background: var(--contact-bg); color: #cfe0f7; border-top: 1px solid rgba(255,255,255,.15); font-size: var(--step--1); }
@@ -488,5 +484,4 @@ button.cert-thumb.stack:hover .s3 { transform: translateX(6%) rotate(12deg); }
   .case-side { flex-direction: column; align-items: start; }
   .footer-row { flex-direction: column; }
   .contact-tiles { grid-template-columns: 1fr; }
-  .contact-tile.primary .contact-value { font-size: 1.02rem; }
 }
