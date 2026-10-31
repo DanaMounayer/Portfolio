@@ -48,7 +48,7 @@ window.PROJECTS = [
     name: "Preeclampsia risk prediction",
     meta: "Machine Learning · 2026",
     short: "Eight classifiers stress-tested under imbalance, label noise and drift. Random Forest reached AUC 0.951.",
-    image: "images/papers/preeclampsia.webp",
+    cover: { kind: "roc" },
     title: "Early prediction of preeclampsia from multi-source maternal health data",
     course: "Machine Learning · Spring 2026",
     categories: ["ai", "data"],
@@ -68,7 +68,7 @@ window.PROJECTS = [
     name: "Resilient heart-disease pipeline",
     meta: "Big Data Analytics · 2026",
     short: "PySpark + Kafka pipeline across three simulated hospitals with federated learning. 84.85% accuracy, robust under attack.",
-    image: "images/papers/heart-disease.webp",
+    cover: { kind: "heart" },
     title: "Resilient heart-disease prediction pipeline on big data",
     course: "Big Data Analytics · Spring 2026",
     categories: ["ai", "data"],
@@ -88,7 +88,7 @@ window.PROJECTS = [
     name: "AI smart recycling bin",
     meta: "Artificial Intelligence · 2025",
     short: "MobileNetV2 sorts waste into five classes in real time, trained on TrashNet plus real-world photos.",
-    image: "images/papers/recycling-bin.webp",
+    cover: { kind: "bins" },
     title: "AI-powered recycling bin that sorts waste with MobileNetV2",
     course: "Artificial Intelligence · Fall 2025",
     categories: ["ai"],
@@ -106,7 +106,7 @@ window.PROJECTS = [
     name: "Wearable seizure monitoring",
     meta: "Software Engineering · 2026",
     short: "Wearable EEG, heart-rate and motion sensors feed real-time seizure detection with caregiver alerts.",
-    image: "images/papers/eeg-seizure.webp",
+    cover: { kind: "wearable" },
     title: "Smart wearable system for seizure monitoring and emergency response",
     course: "Software Engineering · CS3151",
     categories: ["ai", "web"],
@@ -132,7 +132,7 @@ window.PROJECTS = [
     name: "On The Go",
     meta: "Web Development · 2024",
     short: "Jeddah drive-thru guide with menus, prices, ratings, reviews, search and favourites.",
-    image: "images/projects/on-the-go.webp",
+    cover: { kind: "drive" },
     title: "On The Go: drive-thru guide for Jeddah",
     course: "Web Application Development · CS2111 · Fall 2024 · with Judy Al-Imam",
     categories: ["web"],
@@ -151,28 +151,28 @@ window.PAPERS = [
     title: "Early prediction of preeclampsia using multi-source maternal health data",
     finding: "Eight classifiers stress-tested under imbalance, label noise and drift. Random Forest reached 84.7% accuracy and AUC 0.951.",
     authors: "with Sedra Al Jundi and Jwdee Al Amam",
-    image: "images/papers/preeclampsia.webp", file: "papers/early-prediction-of-preeclampsia.pdf"
+    cover: { kind: "roc" }, file: "papers/early-prediction-of-preeclampsia.pdf"
   },
   {
     course: "Big Data Analytics · CS4074", term: "Spring 2026",
     title: "Resilient AI pipeline for heart-disease prediction under adversarial big-data conditions",
     finding: "A PySpark and Kafka pipeline across three simulated hospitals: 84.85% accuracy, losing at most 3 points under attack, with federated learning converging in five rounds.",
     authors: "with Sara Imran",
-    image: "images/papers/heart-disease.webp", file: "papers/resilient-heart-disease-pipeline.pdf"
+    cover: { kind: "heart" }, file: "papers/resilient-heart-disease-pipeline.pdf"
   },
   {
     course: "Data Science · CS3072", term: "Spring 2026",
     title: "Data-driven analysis of EEG signals for epileptic seizure detection",
     finding: "EEG recordings reframed as seizure vs. non-seizure classification. Random Forest detected seizures with 97.4% accuracy.",
     authors: "with Jwdee Al Amam",
-    image: "images/papers/eeg-seizure.webp", file: "papers/eeg-seizure-detection.pdf"
+    cover: { kind: "wearable" }, file: "papers/eeg-seizure-detection.pdf"
   },
   {
     course: "Research Methods · GSEM 201", term: "",
     title: "AI-powered smart recycling bin for sustainable waste management in Saudi Arabia",
     finding: "MobileNetV2 trained on TrashNet plus photos from public places in Saudi Arabia, reaching 78.24% accuracy across five waste classes in real-world conditions.",
     authors: "with Raghad Shamma and Jana Al Ayoobi",
-    image: "images/papers/recycling-bin.webp", file: "papers/smart-recycling-bin-saudi-arabia.pdf"
+    cover: { kind: "bins" }, file: "papers/smart-recycling-bin-saudi-arabia.pdf"
   }
 ];
 

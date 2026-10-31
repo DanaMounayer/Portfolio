@@ -88,9 +88,47 @@
 
   var GH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>';
   var EXT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
+  /* Illustrated project covers: one colour per project, white line art, one key number. */
+  var cov = function (cls, stat, label, art) {
+    return '<div class="proj-cover ' + cls + '">' + art +
+      (stat ? '<span class="cover-stat"><b>' + stat + "</b>" + label + "</span>" : "") + "</div>";
+  };
+  var SV = function (inner, vb) { return '<svg class="cover-art" viewBox="' + (vb || "0 0 320 200") + '" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + inner + "</svg>"; };
   var COVERS = {
-    badira: '<div class="proj-cover cover-badira"><span class="cover-ar">بادرة</span><span class="cover-en">Badira</span></div>',
-    network: '<div class="proj-cover cover-network"><svg viewBox="0 0 200 110" aria-hidden="true"><g stroke="currentColor" stroke-width="2" fill="none" opacity=".55"><path d="M100 22 50 60M100 22l50 38M50 60l-28 34M50 60l18 34M150 60l-18 34M150 60l28 34M50 60h100"/></g><g fill="currentColor"><circle cx="100" cy="22" r="9"/><rect x="40" y="51" width="20" height="18" rx="4"/><rect x="140" y="51" width="20" height="18" rx="4"/><circle cx="22" cy="96" r="6"/><circle cx="68" cy="96" r="6"/><circle cx="132" cy="96" r="6"/><circle cx="178" cy="96" r="6"/></g></svg></div>'
+    badira: cov("c-badira", "3", "readings", SV(
+      '<g stroke-width="2" opacity=".35"><circle cx="70" cy="70" r="30"/><circle cx="160" cy="70" r="30"/><circle cx="250" cy="70" r="30"/></g>' +
+      '<g stroke-width="5"><path d="M48 82a30 30 0 0 1 36-36" /><path d="M138 82a30 30 0 0 1 50-24"/><path d="M228 82a30 30 0 0 1 52-6"/></g>' +
+      '<g fill="currentColor" stroke="none" font-family="inherit" font-size="11" text-anchor="middle" opacity=".85"><text x="70" y="122">Risk</text><text x="160" y="122">Reliability</text><text x="250" y="122">Time</text></g>', "30 32 260 98") +
+      '<span class="cover-word">بادرة</span>'),
+    roc: cov("c-roc", "0.951", "AUC", SV(
+      '<g stroke-width="1" opacity=".25"><path d="M60 30v130h220"/><path d="M60 160 280 30" stroke-dasharray="4 5"/></g>' +
+      '<path stroke-width="4" d="M60 160C66 70 110 44 280 30"/>' +
+      '<g stroke-width="2" opacity=".55"><path d="M60 160C80 96 130 66 280 30"/><path d="M60 160C96 120 150 80 280 30"/></g>' +
+      '<g fill="currentColor" stroke="none"><circle cx="92" cy="72" r="5"/></g>', "50 22 240 145")),
+    heart: cov("c-heart", "84.85%", "accuracy", SV(
+      '<path stroke-width="4" d="M20 110h70l12-34 16 70 14-52 10 16h52"/>' +
+      '<g stroke-width="2" opacity=".55"><path d="M196 110l40-46M196 110l40 0M196 110l40 46"/></g>' +
+      '<g stroke-width="3"><rect x="236" y="48" width="44" height="32" rx="7"/><rect x="236" y="94" width="44" height="32" rx="7"/><rect x="236" y="140" width="44" height="32" rx="7"/></g>' +
+      '<g fill="currentColor" stroke="none"><circle cx="196" cy="110" r="8"/></g>', "14 40 276 140")),
+    bins: cov("c-bins", "5", "waste classes", SV(
+      '<g stroke-width="3">' + [0,1,2,3,4].map(function (k) { var x = 34 + k * 54;
+        return '<path d="M' + (x) + ' 88h40l-5 70h-30z"/><path d="M' + (x - 4) + ' 88h48"/><path d="M' + (x + 14) + ' 82h12"/>'; }).join("") + "</g>" +
+      '<g fill="currentColor" stroke="none" font-size="10" text-anchor="middle" opacity=".85">' +
+        ["Plastic","Paper","Glass","Metal","Trash"].map(function (t, k) { return '<text x="' + (54 + k * 54) + '" y="180">' + t + "</text>"; }).join("") + "</g>" +
+      '<path stroke-width="2" opacity=".55" d="M160 30v30m-10-10 10 10 10-10"/>', "22 24 276 162")),
+    wearable: cov("c-wear", "&lt;5s", "alerts", SV(
+      '<g stroke-width="3"><rect x="40" y="62" width="70" height="80" rx="18"/><path d="M55 62l6-30h28l6 30M55 142l6 30h28l6-30"/></g>' +
+      '<path stroke-width="3" d="M52 102h12l6-16 8 30 6-14h12"/>' +
+      '<path stroke-width="4" d="M130 102h30l8-40 10 80 10-60 8 30 8-10h20l10-30 8 50 8-20h30"/>' +
+      '<g stroke-width="2" opacity=".55"><path d="M286 64a20 20 0 0 1 0 28M296 56a32 32 0 0 1 0 44"/></g>', "32 26 276 152")),
+    network: cov("c-net", "WAN", "campus", SV(
+      '<g stroke-width="2" opacity=".55"><path d="M160 40 90 100M160 40l70 60M90 100l-40 56M90 100l26 56M230 100l-26 56M230 100l40 56M90 100h140"/></g>' +
+      '<g fill="currentColor" stroke="none"><circle cx="160" cy="40" r="12"/><rect x="76" y="88" width="28" height="24" rx="6"/><rect x="216" y="88" width="28" height="24" rx="6"/><circle cx="50" cy="160" r="8"/><circle cx="116" cy="160" r="8"/><circle cx="204" cy="160" r="8"/><circle cx="270" cy="160" r="8"/></g>', "34 24 252 146")),
+    drive: cov("c-drive", "8", "drive-thrus", SV(
+      '<path stroke-width="2" opacity=".4" d="M10 160h300" stroke-dasharray="14 12"/>' +
+      '<g stroke-width="4"><path d="M72 150h120v-34l-18-36h-84l-18 36z"/><path d="M72 116h120"/></g>' +
+      '<g stroke-width="4"><circle cx="100" cy="152" r="12"/><circle cx="164" cy="152" r="12"/></g>' +
+      '<g class="board" stroke-width="3"><rect x="226" y="60" width="54" height="90" rx="6"/><path d="M236 76h34M236 90h26M236 104h30M253 150v12"/></g>', "60 54 230 112"))
   };
   var projCard = function (p) {
     var media = p.image
