@@ -172,7 +172,14 @@ nav a[aria-current="true"] { color: var(--navy); border-bottom-color: var(--navy
   border-radius: 50%;
   box-shadow: 0 0 0 10px var(--paper), 0 0 0 12px var(--sky);
 }
-.hero-photo figcaption { display: flex; justify-content: center; gap: 1.25rem; margin-top: 1.5rem; font-weight: 600; }
+.hero-photo figcaption { display: flex; justify-content: center; gap: .75rem; margin-top: 1.5rem; }
+.social-icon {
+  width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%;
+  color: var(--navy); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+  transition: background-color .2s, color .2s, transform .2s;
+}
+.social-icon svg { width: 20px; height: 20px; }
+.social-icon:hover { color: var(--on-accent); background: var(--navy); border-color: var(--navy); transform: translateY(-2px); }
 
 /* single orchestrated entrance */
 @media (prefers-reduced-motion: no-preference) {
