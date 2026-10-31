@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css?v=202610312352" />
+    <link rel="stylesheet" href="css/style.css?v=202611010025" />
     <script>
       (function () {
         var t = null;
@@ -29,20 +29,18 @@
 
     <header class="site-header">
       <div class="dock">
-        <a class="mark" href="#home" aria-label="Dana Al Mounayer, back to top">
-          <span class="mark-badge" aria-hidden="true">د<i></i></span>
-          <span class="mark-name">Dana</span>
-        </a>
+        <a class="mark" href="#home"><span class="mark-dot" aria-hidden="true"></span><span class="mark-name">Dana Al Mounayer</span></a>
         <span class="dock-current" aria-hidden="true"></span>
         <nav id="nav" aria-label="Main">
           <span class="dock-pill" aria-hidden="true"></span>
           <ul>
-            <li><a href="#work">Work</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#research">Research</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#volunteering">Volunteering</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -67,7 +65,7 @@
               learning and NLP, with a focus on healthcare applications.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-solid" href="#work">See my work</a>
+              <a class="btn btn-solid" href="#projects">See my work</a>
               <a class="btn btn-line" href="CV.pdf" target="_blank" rel="noopener">Download CV</a>
             </div>
             <dl class="hero-facts">
@@ -84,24 +82,6 @@
               <a class="social-icon" href="mailto:dana.mounayer@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></a>
             </figcaption>
           </figure>
-        </div>
-      </section>
-
-      <!-- Work -->
-      <section id="work" class="section">
-        <div class="wrap">
-          <header class="section-head">
-            <h2>Projects</h2>
-            <p>AI, data and software projects from my degree and competitions.</p>
-          </header>
-          <div class="toolbar project-toolbar">
-            <div class="filters" id="project-filters" role="group" aria-label="Filter projects"></div>
-            <label class="search">
-              <span class="visually-hidden">Search projects</span>
-              <input id="project-search" type="search" placeholder="Search projects" autocomplete="off" />
-            </label>
-          </div>
-          <div id="project-list" class="proj-grid" aria-live="polite"></div>
         </div>
       </section>
 
@@ -146,27 +126,35 @@
         </div>
       </section>
 
-      <!-- Experience -->
-      <section id="experience" class="section">
+      <!-- Skills -->
+      <section id="skills" class="section">
         <div class="wrap">
           <header class="section-head">
-            <h2>Experience &amp; volunteering</h2>
-            <p>Work experience and time given to the community.</p>
+            <h2>Skills</h2>
+            <p>Drawn as a small neural network, from the languages I write to the tools I ship with. Hover a skill to see its connections.</p>
           </header>
-          <ol id="experience-list" class="experience"></ol>
-          <h3 class="sub-title">Volunteering</h3>
-          <div id="volunteer-grid" class="volunteer-grid"></div>
+          <div class="net" id="skill-net">
+            <svg class="net-edges" aria-hidden="true"></svg>
+            <div class="net-layers" id="skill-layers"></div>
+          </div>
         </div>
       </section>
 
-      <!-- Research -->
-      <section id="research" class="section section-tint">
+      <!-- Projects -->
+      <section id="projects" class="section section-tint">
         <div class="wrap">
           <header class="section-head">
-            <h2>Research &amp; papers</h2>
-            <p>Papers and reports from my AI, data and healthcare projects. Each one opens as a PDF.</p>
+            <h2>Projects</h2>
+            <p>AI, data and software projects from my degree and competitions.</p>
           </header>
-          <div id="papers" class="papers"></div>
+          <div class="toolbar project-toolbar">
+            <div class="filters" id="project-filters" role="group" aria-label="Filter projects"></div>
+            <label class="search">
+              <span class="visually-hidden">Search projects</span>
+              <input id="project-search" type="search" placeholder="Search projects" autocomplete="off" />
+            </label>
+          </div>
+          <div id="project-list" class="proj-grid" aria-live="polite"></div>
         </div>
       </section>
 
@@ -182,17 +170,36 @@
         </div>
       </section>
 
-      <!-- Skills -->
-      <section id="skills" class="section section-tint">
+      <!-- Experience -->
+      <section id="experience" class="section section-tint">
         <div class="wrap">
           <header class="section-head">
-            <h2>Skills</h2>
-            <p>Drawn as a small neural network, from the languages I write to the tools I ship with. Hover a skill to see its connections.</p>
+            <h2>Experience</h2>
+            <p>Work experience outside the classroom.</p>
           </header>
-          <div class="net" id="skill-net">
-            <svg class="net-edges" aria-hidden="true"></svg>
-            <div class="net-layers" id="skill-layers"></div>
-          </div>
+          <ol id="experience-list" class="experience"></ol>
+        </div>
+      </section>
+
+      <!-- Research -->
+      <section id="research" class="section">
+        <div class="wrap">
+          <header class="section-head">
+            <h2>Research &amp; papers</h2>
+            <p>Papers and reports from my AI, data and healthcare projects. Each one opens as a PDF.</p>
+          </header>
+          <div id="papers" class="papers"></div>
+        </div>
+      </section>
+
+      <!-- Volunteering -->
+      <section id="volunteering" class="section section-tint">
+        <div class="wrap">
+          <header class="section-head">
+            <h2>Volunteering</h2>
+            <p>Time given to the community in Jeddah.</p>
+          </header>
+          <div id="volunteer-grid" class="volunteer-grid"></div>
         </div>
       </section>
 
@@ -251,7 +258,7 @@
       </div>
     </dialog>
 
-    <script src="js/data.js?v=202610312352"></script>
-    <script src="js/script.js?v=202610312352"></script>
+    <script src="js/data.js?v=202611010025"></script>
+    <script src="js/script.js?v=202611010025"></script>
   </body>
 </html>

@@ -107,25 +107,12 @@ h3 { font-size: var(--step-1); font-weight: 600; }
 }
 .site-header.scrolled .dock { box-shadow: 0 16px 40px -14px rgba(13, 26, 51, .38), inset 0 1px 0 rgba(255,255,255,.35); }
 
-/* monogram: Arabic د with an orbiting dot; expands to "Dana" on hover */
-.mark { display: flex; align-items: center; gap: 0; text-decoration: none; color: var(--ink); border-radius: 999px; padding-right: .2rem; }
-.mark-badge {
-  position: relative; width: 40px; height: 40px; border-radius: 50%; flex: none;
-  display: grid; place-items: center; color: #fff;
-  font-family: "Noto Kufi Arabic", system-ui, sans-serif; font-weight: 700; font-size: 1.15rem; line-height: 1; padding-bottom: 3px;
-  background: conic-gradient(from 210deg, #0b3d91, #1e5bb8, #0e7c86, #0b3d91);
-}
-.mark-badge i {
-  position: absolute; width: 8px; height: 8px; border-radius: 50%; background: #5fd3da; border: 2px solid var(--surface);
-  top: -1px; right: -1px; transform-origin: -12px 21px;
-}
-@media (prefers-reduced-motion: no-preference) { .mark-badge i { animation: orbit 9s linear infinite; } }
-@keyframes orbit { to { transform: rotate(360deg); } }
-.mark-name {
-  font-family: var(--display); font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em;
-  max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width .35s ease, opacity .25s, margin .35s;
-}
-.mark:hover .mark-name, .mark:focus-visible .mark-name { max-width: 70px; opacity: 1; margin-left: .55rem; }
+/* wordmark: full name with a small gradient dot */
+.mark { display: flex; align-items: center; gap: .55rem; text-decoration: none; color: var(--ink); padding: .45rem .9rem .45rem .7rem; border-radius: 999px; flex: none; transition: background-color .2s; }
+.mark:hover { background: color-mix(in srgb, var(--navy) 8%, transparent); color: var(--ink); }
+.mark-dot { width: 12px; height: 12px; border-radius: 50%; background: conic-gradient(from 200deg, #0b3d91, #1e5bb8, #0e7c86, #5fd3da, #0b3d91); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 20%, transparent); }
+.mark-name { font-family: var(--display); font-weight: 600; font-size: 1rem; letter-spacing: -0.01em; white-space: nowrap; }
+.dock-divider { width: 1px; height: 24px; background: var(--line); }
 
 nav { position: relative; }
 nav ul { position: relative; z-index: 1; list-style: none; padding: 0; display: flex; gap: .1rem; }
@@ -544,20 +531,10 @@ button.cert-thumb.stack:hover .s3 { transform: translateX(6%) rotate(12deg); }
 .site-footer a { color: var(--white); }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 960px) {
-  .paper-lead { flex-direction: column; }
-  .paper-lead .paper-figure { aspect-ratio: 16 / 9; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
-  .volunteer-grid { grid-template-columns: 1fr 1fr; }
-  .case { grid-template-columns: 1fr; }
-  .case-side { border-left: 0; border-top: 1px solid var(--line); padding: 1.5rem 0 0; flex-direction: row; align-items: end; }
-  .project-row { grid-template-columns: 1fr; gap: .5rem; }
-}
-
-@media (max-width: 820px) {
+@media (max-width: 1180px) {
   .menu-toggle { display: grid; }
   .site-header { justify-content: stretch; }
   .dock { width: 100%; padding-right: .35rem; }
-  .mark-name { max-width: 70px; opacity: 1; margin-left: .55rem; }
   .dock-current { display: block; flex: 1; text-align: right; padding-right: .3rem; font-size: .9rem; font-weight: 600; color: var(--muted); }
   nav {
     position: absolute; top: calc(100% + .5rem); left: 0; right: 0;
@@ -569,6 +546,18 @@ button.cert-thumb.stack:hover .s3 { transform: translateX(6%) rotate(12deg); }
   nav a { padding: .75rem 1rem; border-radius: 14px; font-size: 1rem; color: var(--ink); }
   nav a[aria-current="true"] { background: var(--navy); color: var(--on-accent); }
   .dock-pill { display: none; }
+}
+
+@media (max-width: 960px) {
+  .paper-lead { flex-direction: column; }
+  .paper-lead .paper-figure { aspect-ratio: 16 / 9; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .volunteer-grid { grid-template-columns: 1fr 1fr; }
+  .case { grid-template-columns: 1fr; }
+  .case-side { border-left: 0; border-top: 1px solid var(--line); padding: 1.5rem 0 0; flex-direction: row; align-items: end; }
+  .project-row { grid-template-columns: 1fr; gap: .5rem; }
+}
+
+@media (max-width: 820px) {
 
   .hero-grid { grid-template-columns: 1fr; }
   .hero-name { margin-right: 0; }

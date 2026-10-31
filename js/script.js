@@ -48,7 +48,7 @@
   var movePill = function () {
     var on = $("a[aria-current]", nav);
     current.textContent = on ? on.textContent : "";
-    if (!on || window.matchMedia("(max-width: 820px)").matches) { pill.style.opacity = 0; return; }
+    if (!on || window.matchMedia("(max-width: 1180px)").matches) { pill.style.opacity = 0; return; }
     pill.style.width = on.offsetWidth + "px";
     pill.style.transform = "translateX(" + on.offsetLeft + "px)";
     pill.style.opacity = 1;
