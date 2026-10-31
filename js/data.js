@@ -208,14 +208,8 @@ window.CERTIFICATES = [
     date: "Mar 2025", image: "images/certs/mawakeb-alajer-arzaq-2025.webp" }
 ];
 
-/* Work and competitions, newest first. */
+/* Work experience, newest first. */
 window.EXPERIENCE = [
-  {
-    date: "Sep–Nov 2026",
-    role: "Team member, Badira",
-    org: "StartSmart Saudi University Challenge · Community Jameel Saudi",
-    text: "Took Badira from idea to working prototype with Judy Al-Imam through a bootcamp and challenge, learning entrepreneurship, product development, business models and pitching. We qualified for the next stage after local judging."
-  },
   {
     date: "Summer 2026",
     role: "Summer camp assistant",
