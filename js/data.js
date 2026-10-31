@@ -23,7 +23,8 @@ window.CATEGORIES = [
 
 window.PROJECTS = [
   {
-    featured: true,
+    summary:
+      "A bilingual Arabic/English web app that raises early awareness of preeclampsia among Saudi and Arab women. I designed a Risk × Reliability × Time framework that shows screening priority, data completeness and pregnancy-stage timing as separate readings instead of one opaque score. Qualified for the next stage of the challenge and received a Certificate of Appreciation.",
     title: "Badira (بادرة): a preeclampsia early-awareness app",
     course: "StartSmart Saudi University Challenge · Sep–Nov 2026 · with Judy Al-Imam",
     categories: ["ai", "web"],
@@ -38,7 +39,8 @@ window.PROJECTS = [
     link: "https://github.com/DanaMounayer/Start-Smart-Badira"
   },
   {
-    featured: true,
+    summary:
+      "Trained and compared eight classifiers across three clinical datasets, stress-tested under class imbalance, label noise and feature drift. Random Forest was the most robust, with 84.7% accuracy and AUC 0.951.",
     title: "Early prediction of preeclampsia from multi-source maternal health data",
     course: "Machine Learning · Spring 2026",
     categories: ["ai", "data"],
@@ -53,7 +55,8 @@ window.PROJECTS = [
     link: "https://github.com/DanaMounayer/CS4082-Machine-Learning-Project"
   },
   {
-    featured: true,
+    summary:
+      "A PySpark and Kafka pipeline that simulates three hospitals and trains with federated learning, so no patient data leaves a hospital. 84.85% accuracy on clean data, losing at most 3 points under noise, label poisoning and missing values.",
     title: "Resilient heart-disease prediction pipeline on big data",
     course: "Big Data Analytics · Spring 2026",
     categories: ["ai", "data"],
@@ -68,7 +71,8 @@ window.PROJECTS = [
     link: "https://github.com/DanaMounayer/CS4074-Big-Data-Analytics-Project"
   },
   {
-    featured: true,
+    summary:
+      "Transfer learning on MobileNetV2 to sort waste into plastic, paper, glass, metal and general trash in real time, trained on TrashNet plus real-world photos.",
     title: "AI-powered recycling bin that sorts waste with MobileNetV2",
     course: "Artificial Intelligence · Fall 2025",
     categories: ["ai"],
@@ -140,13 +144,6 @@ window.PAPERS = [
     finding: "MobileNetV2 trained on TrashNet plus photos from public places in Saudi Arabia, reaching 78.24% accuracy across five waste classes in real-world conditions.",
     authors: "with Raghad Shamma and Jana Al Ayoobi",
     image: "images/papers/recycling-bin.webp", file: "papers/smart-recycling-bin-saudi-arabia.pdf"
-  },
-  {
-    course: "Review paper", term: "2025–2026",
-    title: "Impact of AI and machine learning in gynecology",
-    finding: "A review of AI across risk prediction, diagnostic imaging, precision medicine and surgical support, and the ethics of bringing it into care.",
-    authors: "",
-    image: "images/papers/gynecology.webp", file: "papers/impact-of-ai-in-gynecology.pdf"
   }
 ];
 

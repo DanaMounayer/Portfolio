@@ -221,6 +221,7 @@ nav a[aria-current="true"] { color: var(--navy); border-bottom-color: var(--navy
 /* ---------- All projects ---------- */
 .more-head { margin-top: 4rem; margin-bottom: 1rem; }
 .more-head h3 { font-size: var(--step-2); font-weight: 600; margin-bottom: 1rem; }
+.project-toolbar { margin-bottom: 1.25rem; }
 .toolbar { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
 
 .filters { display: flex; flex-wrap: wrap; gap: .5rem; }
@@ -242,12 +243,14 @@ nav a[aria-current="true"] { color: var(--navy); border-bottom-color: var(--navy
 
 .project-list { list-style: none; padding: 0; border-top: 1px solid var(--line); }
 .project-row {
-  display: grid; grid-template-columns: 1fr 1.4fr auto; gap: 1.5rem 2rem; align-items: start;
+  display: grid; grid-template-columns: 1fr 1.5fr 10rem; gap: 1.5rem 2rem; align-items: start;
   padding: 1.5rem 0; border-bottom: 1px solid var(--line);
 }
 .project-row h4 { font-family: var(--display); font-size: var(--step-1); font-weight: 600; line-height: 1.2; }
 .project-row .case-course { margin: .3rem 0 0; }
 .project-row p { color: var(--ink); }
+.project-row > div:last-child { text-align: right; }
+@media (max-width: 960px) { .project-row > div:last-child { text-align: left; } }
 .project-row .tags { margin-top: .75rem; }
 .empty { padding: 2rem 0; color: var(--muted); }
 

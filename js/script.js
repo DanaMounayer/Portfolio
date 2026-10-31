@@ -70,28 +70,7 @@
 
   /* ---------- Featured projects ---------- */
   var projects = window.PROJECTS || [];
-  var featuredEl = $("#featured");
-  featuredEl.innerHTML = projects.filter(function (p) { return p.featured; }).map(function (p) {
-    return '<article class="case">' +
-      "<div>" +
-        '<p class="case-course">' + esc(p.course) + "</p>" +
-        "<h3>" + esc(p.title) + "</h3>" +
-        "<dl>" +
-          "<div><dt>The problem</dt><dd>" + esc(p.problem) + "</dd></div>" +
-          "<div><dt>What I built</dt><dd>" + esc(p.approach) + "</dd></div>" +
-          "<div><dt>Result</dt><dd>" + esc(p.outcome) + "</dd></div>" +
-        "</dl>" +
-        tags(p.tech) +
-      "</div>" +
-      '<div class="case-side">' +
-        (p.result ? '<p class="case-result"><strong>' + esc(p.result.value) + "</strong><span>" + esc(p.result.label) + "</span></p>" : "") +
-        repo(p.link) +
-      "</div>" +
-    "</article>";
-  }).join("");
-
   /* ---------- All projects: filter + search ---------- */
-  var others = projects.filter(function (p) { return !p.featured; });
   var all = projects; // the list shows every project, featured ones included
   var listEl = $("#project-list");
   var pFilters = $("#project-filters");
@@ -204,7 +183,7 @@
 
   /* ---------- Papers ---------- */
   $("#papers").innerHTML = (window.PAPERS || []).map(function (p, k) {
-    return '<article class="paper' + (k === 0 ? " paper-lead" : "") + '">' +
+    return '<article class="paper' + "" + '">' +
       '<a class="paper-figure" href="' + esc(p.file) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">' +
         '<img src="' + esc(p.image) + '" alt="" loading="lazy"></a>' +
       '<div class="paper-body">' +
