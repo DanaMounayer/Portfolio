@@ -25,20 +25,36 @@
   toggle.addEventListener("click", function () {
     var open = nav.classList.toggle("open");
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.textContent = open ? "Close" : "Menu";
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   });
   $$("a", nav).forEach(function (a) {
     a.addEventListener("click", function () {
       nav.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
-      toggle.textContent = "Menu";
+      toggle.setAttribute("aria-label", "Open menu");
     });
   });
 
-  var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 8); };
+  var progress = $(".dock-progress");
+  var onScroll = function () {
+    header.classList.toggle("scrolled", window.scrollY > 8);
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.setProperty("--p", max > 0 ? Math.min(1, window.scrollY / max) : 0);
+  };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  var pill = $(".dock-pill"), current = $(".dock-current");
+  var movePill = function () {
+    var on = $("a[aria-current]", nav);
+    current.textContent = on ? on.textContent : "";
+    if (!on || window.matchMedia("(max-width: 820px)").matches) { pill.style.opacity = 0; return; }
+    pill.style.width = on.offsetWidth + "px";
+    pill.style.transform = "translateX(" + on.offsetLeft + "px)";
+    pill.style.opacity = 1;
+  };
+  window.addEventListener("resize", movePill);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(movePill);
   if ("IntersectionObserver" in window) {
     var links = $$("a", nav);
     var spy = new IntersectionObserver(function (entries) {
@@ -48,6 +64,7 @@
           if (l.getAttribute("href") === "#" + e.target.id) l.setAttribute("aria-current", "true");
           else l.removeAttribute("aria-current");
         });
+        movePill();
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
     $$("main section[id]").forEach(function (s) { spy.observe(s); });
