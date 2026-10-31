@@ -101,9 +101,9 @@
       "<h3>" + titleHtml + "</h3>" +
       "<p>" + esc(p.short) + "</p>" +
       (p.highlight ? '<p class="proj-highlight">' + esc(p.highlight) + "</p>" : "") +
-      '<div class="proj-foot"><ul class="tags">' + (p.tech || []).slice(0, 2).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>" +
+      '<div class="proj-foot"><ul class="tags">' + (p.tech || []).slice(0, p.tagCount || 2).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>" +
         '<div class="proj-icons">' + icons + "</div></div>" +
-      (p.demo ? '<a class="proj-live" href="' + esc(p.demo) + '" target="_blank" rel="noopener">Visit the live site</a>' : "") +
+      (p.demo ? '<a class="proj-live" href="' + esc(p.demo) + '" target="_blank" rel="noopener">' + esc(p.demoLabel || "Visit the live site") + '</a>' : "") +
     "</article>";
   };
   var renderProjects = function () {

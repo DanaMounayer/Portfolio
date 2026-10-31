@@ -307,6 +307,7 @@ nav a[aria-current="true"] { color: var(--navy); border-bottom-color: var(--navy
 .icon-link:hover { background: var(--navy); color: var(--on-accent); border-color: var(--navy); }
 .icon-link svg { width: 18px; height: 18px; }
 /* the live project: whole card is clickable */
+.proj.is-live .proj-foot .tags { flex-wrap: wrap; }
 .proj.is-live { cursor: pointer; background: linear-gradient(160deg, color-mix(in srgb, var(--cat) 8%, var(--surface)), var(--surface) 60%); }
 .proj-live {
   position: relative; z-index: 1; align-self: flex-start; margin-top: .2rem;

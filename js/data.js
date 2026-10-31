@@ -40,6 +40,8 @@ window.PROJECTS = [
       "A working prototype that produces a structured summary to share with a healthcare provider. We qualified for the next stage after local judging and received a Certificate of Appreciation.",
     result: { value: "3 readings", label: "risk, reliability and timing, instead of one opaque score" },
     tech: ["Web app", "Arabic / English", "Risk framework", "Healthcare AI", "Pitching"],
+    demo: "https://badira-ai.netlify.app/",
+    demoLabel: "Try the prototype",
     link: "https://github.com/DanaMounayer/Start-Smart-Badira"
   },
   {
@@ -138,7 +140,8 @@ window.PROJECTS = [
     categories: ["web"],
     summary:
       "A guide to Jeddah's drive-thrus with full menus and prices, ratings and reviews. Visitors can search by dish, filter by category, save favourites, post reviews with star ratings and send messages through a validated contact form.",
-    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "SQL"],
+    tech: ["HTML", "CSS", "JavaScript", "PHP"],
+    tagCount: 4,
     link: "https://github.com/DanaMounayer/CS2111-Web-Development-Project",
     demo: "https://danamounayer.github.io/CS2111-Web-Development-Project/"
   }
