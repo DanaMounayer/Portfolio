@@ -242,7 +242,7 @@ window.VOLUNTEERING = [
   {
     org: "Subha Community",
     cause: "Social services",
-    date: "Ramadan",
+    date: "Mar 2025",
     text: "Helped organise and distribute iftar meals to people in need, and took part in outreach to underserved communities.",
     images: [{ src: "images/experience/subha-community.webp", caption: "The Subha Community volunteer team" }]
   },
