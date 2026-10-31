@@ -24,18 +24,18 @@ window.CATEGORIES = [
 window.PROJECTS = [
   {
     featured: true,
-    title: "Badira (بادرة): personalised, trustworthy pregnancy-complication risk prediction",
-    course: "StartSmart Saudi University Challenge 2026 · with Judy Al-Imam",
-    categories: ["ai"],
+    title: "Badira (بادرة): a preeclampsia early-awareness app",
+    course: "StartSmart Saudi University Challenge · Sep–Nov 2026 · with Judy Al-Imam",
+    categories: ["ai", "web"],
     problem:
-      "Pregnancy-complication risk is different for every mother, and a prediction is only useful if clinicians and families can trust why it was made.",
+      "Preeclampsia is often recognised late, and a single risk score doesn't tell a mother how far to trust it or when to act.",
     approach:
-      "Over five days, Judy Al-Imam and I took Badira from an idea to a working prototype: an AI framework that predicts pregnancy-complication risk for each mother and is designed to be trustworthy. Alongside the model we worked through the product, the business model and the pitch.",
+      "We built a bilingual Arabic/English web app that raises early awareness of preeclampsia among Saudi and Arab women. I designed a Risk × Reliability × Time framework that shows screening priority, data completeness and pregnancy-stage timing as three separate readings instead of one opaque score.",
     outcome:
-      "We presented Badira at the local judging stage of the challenge, organised by Community Jameel Saudi, and qualified for the next stage.",
-    result: { value: "Next stage", label: "qualified after local judging, from idea to prototype in 5 days" },
-    tech: ["Machine learning", "Healthcare AI", "Product development", "Business model", "Pitching"],
-    link: null
+      "A working prototype that produces a structured summary to share with a healthcare provider. We qualified for the next stage after local judging and received a Certificate of Appreciation.",
+    result: { value: "3 readings", label: "risk, reliability and timing, instead of one opaque score" },
+    tech: ["Web app", "Arabic / English", "Risk framework", "Healthcare AI", "Pitching"],
+    link: "https://github.com/DanaMounayer/Start-Smart-Badira"
   },
   {
     featured: true,
@@ -81,6 +81,15 @@ window.PROJECTS = [
     result: { value: "5", label: "waste classes sorted in real time" },
     tech: ["Python", "Computer vision", "Transfer learning", "CNNs"],
     link: "https://github.com/DanaMounayer/CS3081-Artificial-Intelligence-Project"
+  },
+  {
+    title: "Smart wearable system for seizure monitoring and emergency response",
+    course: "Software Engineering · CS3151",
+    categories: ["ai", "web"],
+    summary:
+      "Designed a mobile app connected to wearable sensors (EEG, heart rate, motion) for real-time, AI-based seizure detection and alerts, with a layered, modular architecture using MVC and Observer patterns, targeting alerts in under 5 seconds and 99% reliability.",
+    tech: ["Mobile app", "Wearable sensors", "MVC", "Observer pattern", "Real-time alerts"],
+    link: null
   },
   {
     title: "University network design and simulation",
@@ -135,31 +144,33 @@ window.PAPERS = [
 
 window.SKILLS = [
   { group: "Languages", items: [
-    ["Python", "ML, big data and computer-vision projects"],
-    ["Java", "Banking system, OOP coursework"],
+    ["Python", "ML, deep learning and big-data projects"],
     ["C++", "Data structures and algorithms"],
-    ["JavaScript", "On The Go website, this portfolio"],
+    ["Java", "Banking system, OOP coursework"],
+    ["JavaScript", "Badira, On The Go, this portfolio"],
     ["SQL", "Review storage for On The Go"],
-    ["PHP", "On The Go back end"],
-    ["Lisp", "Programming Languages course"],
-    ["HTML & CSS", "Every web project"]
+    ["PHP", "On The Go back end"]
   ]},
-  { group: "AI, ML & data", items: [
+  { group: "Machine learning & data", items: [
     ["scikit-learn & XGBoost", "Preeclampsia prediction"],
-    ["PySpark & Spark MLlib", "Heart-disease pipeline"],
-    ["Kafka", "Real-time ingestion"],
-    ["Transfer learning (CNNs)", "Recycling bin"],
-    ["TensorFlow, Keras & PyTorch", "IBM AI Engineering, Deep Learning course"],
-    ["Pandas, NumPy, Matplotlib", "Data cleaning and analysis"],
-    ["Power BI", "Dashboards"]
+    ["Feature engineering & ensembles", "Soft-voting ensemble, feature selection"],
+    ["Cross-validation & tuning", "Model evaluation across 3 datasets"],
+    ["PySpark, Spark MLlib & Kafka", "Heart-disease pipeline"],
+    ["Pandas, NumPy, Matplotlib", "Data cleaning and analysis"]
   ]},
-  { group: "Tools & systems", items: [
+  { group: "Deep learning & generative AI", items: [
+    ["PyTorch, TensorFlow & Keras", "IBM AI Engineering, Deep Learning course"],
+    ["Transfer learning (CNNs)", "Recycling bin with MobileNetV2"],
+    ["Hugging Face Transformers", "BERT, GPT and LLaMA models"],
+    ["LangChain & RAG", "IBM capstone: a generative AI app"],
+    ["LLM fine-tuning", "IBM AI Engineering"]
+  ]},
+  { group: "Web & tools", items: [
+    ["HTML, CSS & Bootstrap", "Every web project"],
     ["Git & GitHub", "All projects"],
-    ["Google Colab & Jupyter", "Model training"],
-    ["Cisco Packet Tracer", "Campus network design"],
-    ["VirtualBox", "Operating Systems labs"],
-    ["Bootstrap", "Responsive layouts"],
-    ["VS Code", "Daily editor"]
+    ["Jupyter & Google Colab", "Model training"],
+    ["Claude Code", "Anthropic Academy, day-to-day building"],
+    ["Cisco Packet Tracer", "Campus network design"]
   ]}
 ];
 
@@ -179,7 +190,7 @@ window.CERT_GROUPS = [
   { id: "ai", label: "AI, data & programming" },
   { id: "competitions", label: "Competitions" },
   { id: "honors", label: "Academic honors" },
-  { id: "volunteer", label: "Volunteering" }
+  { id: "volunteer", label: "Volunteering & community" }
 ];
 
 window.CERTIFICATES = [
@@ -191,42 +202,64 @@ window.CERTIFICATES = [
     date: "Oct 2026", verify: "https://coursera.org/verify/professional-cert/K5LST09LIFC3", image: "images/certs/ibm-ai-engineering.webp", featured: true },
   { group: "ai", title: "Neural Networks and Deep Learning", kind: "Course", issuer: "DeepLearning.AI",
     date: "Sep 2026", verify: "https://coursera.org/verify/EW4U8N12C9PZ", image: "images/certs/deeplearning-ai-nn-dl.webp", featured: true },
+  { group: "ai", title: "Anthropic Academy: Claude 101, Claude Code 101, Claude Code in Action, Introduction to Claude Cowork", kind: "4 courses", issuer: "Anthropic",
+    date: "Apr 2026" },
   { group: "ai", title: "Foundations: Data, Data, Everywhere", kind: "Course", issuer: "Google",
     date: "Sep 2025", verify: "https://coursera.org/verify/W9M9321IR47V", image: "images/certs/google-data-everywhere.webp" },
-  { group: "competitions", title: "StartSmart Saudi University Challenge 2026: qualified for the next stage", kind: "Competition · team Badira", issuer: "Community Jameel Saudi", date: "2026", featured: true },
+  { group: "competitions", title: "StartSmart Saudi University Challenge: Certificate of Appreciation (team Badira)", kind: "Competition", issuer: "Community Jameel Saudi & Start Smart Saudi", date: "Nov 2026", featured: true },
   { group: "honors", title: "President's List 2025–2026", kind: "Academic honor", issuer: "Effat University", date: "Sep 2026", featured: true },
   { group: "honors", title: "Dean's List 2024–2025", kind: "Academic honor", issuer: "Effat University", date: "Oct 2025", image: "images/certs/deans-list-2024-2025.webp" },
   { group: "honors", title: "Dean's List 2023–2024", kind: "Academic honor", issuer: "Effat University", date: "Oct 2024" },
-  { group: "volunteer", title: "Iftar meal distribution 2025 (توزيع الفطور)", kind: "Volunteer certificate", issuer: "Joy of Youth", date: "Mar 2025" },
-  { group: "volunteer", title: "Arzaq Ramadan food aid (أرزاق رمضان)", kind: "Volunteer certificate", issuer: "Mawakeb Alajer", date: "Mar 2025" }
+  { group: "volunteer", title: "Summer camp assistant: Certificate of Appreciation", kind: "240 hours", issuer: "Manara Sports Academy",
+    date: "Aug 2026", image: "images/certs/msa-summer-camp-2026.webp" },
+  { group: "volunteer", title: "Iftar meal distribution 2025 (توزيع الفطور)", kind: "Volunteer · 4 hours", issuer: "Joy of Youth",
+    date: "Mar 2025", image: "images/certs/joy-of-youth-iftar-2025.webp" },
+  { group: "volunteer", title: "Preparing Ramadan food baskets (أرزاق رمضان)", kind: "Volunteer · 4h 40m", issuer: "Mawakeb Alajer Endowment",
+    date: "Mar 2025", image: "images/certs/mawakeb-alajer-arzaq-2025.webp" }
 ];
 
-/* Experience and volunteering, newest first. "image" is optional. */
+/* Experience and volunteering, newest first. "images" is optional (up to 2 photos). */
 window.EXPERIENCE = [
   {
-    date: "2026",
+    date: "Sep–Nov 2026",
     role: "Team member, Badira",
     org: "StartSmart Saudi University Challenge · Community Jameel Saudi",
-    text: "Built an AI framework for pregnancy-complication risk prediction with Judy Al-Imam in a five-day bootcamp and challenge. Learned entrepreneurship, product development, business models and pitching, and qualified for the next stage after local judging."
+    text: "Took Badira from idea to working prototype with Judy Al-Imam through a bootcamp and challenge, learning entrepreneurship, product development, business models and pitching. We qualified for the next stage after local judging."
+  },
+  {
+    date: "Summer 2026",
+    role: "Summer camp assistant",
+    org: "Manara Sports Academy (MSA) Summer Camp",
+    text: "Gave 240 hours helping supervise and run daily sports and recreational activities for children, and received a Certificate of Appreciation."
   },
   {
     date: "Ramadan",
     role: "Volunteer",
     org: "Subha Community · Social services",
-    text: "Helped organise and distribute iftar meals to people in need during Ramadan, and took part in outreach to support underserved communities.",
-    image: "images/experience/subha-community.webp",
-    imageAlt: "The Subha Community volunteer team in blue vests"
+    text: "Helped organise and distribute iftar meals to people in need, and took part in outreach to support underserved communities.",
+    images: [{ src: "images/experience/subha-community.webp", alt: "The Subha Community volunteer team in blue vests" }]
   },
   {
     date: "Mar 2025",
     role: "Volunteer",
-    org: "Joy of Youth and Mawakeb Alajer",
-    text: "Distributed iftar meals and Ramadan food aid (توزيع الفطور and أرزاق رمضان), with certificates from both organisations."
+    org: "Mawakeb Alajer Endowment",
+    text: "Spent 4 hours 40 minutes at the endowment's headquarters preparing Ramadan food baskets (أرزاق رمضان)."
+  },
+  {
+    date: "Mar 2025",
+    role: "Volunteer",
+    org: "Joy of Youth",
+    text: "Spent 4 hours distributing iftar meals in the 2025 Ramadan campaign (توزيع الفطور).",
+    images: [{ src: "images/experience/joy-of-youth.webp", alt: "Joy of Youth volunteers gathered in front of a bus" }]
   },
   {
     date: "",
     role: "Volunteer",
     org: "Help Center Company · Children",
-    text: "Volunteered with the Effat University team at the \u201cLet\u2019s Walk the Walk\u201d marathon supporting a children\u2019s cause."
+    text: "Volunteered with the Effat University team at the \u201cLet\u2019s Walk the Walk\u201d marathon, cheering on the young runners along the route.",
+    images: [
+      { src: "images/experience/help-center-marathon.webp", alt: "Dana high-fiving a young runner at the marathon" },
+      { src: "images/experience/help-center-team.webp", alt: "The Effat University volunteer team with the university flag" }
+    ]
   }
 ];

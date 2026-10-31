@@ -126,11 +126,14 @@
 
   /* ---------- Experience ---------- */
   $("#experience-list").innerHTML = (window.EXPERIENCE || []).map(function (x) {
-    return '<li class="exp' + (x.image ? " has-img" : "") + '">' +
+    var imgs = x.images || [];
+    return '<li class="exp' + (imgs.length ? " has-img" : "") + '">' +
       '<p class="exp-date">' + esc(x.date) + "</p>" +
       '<div class="exp-body"><h3>' + esc(x.role) + '</h3><p class="exp-org">' + esc(x.org) + "</p><p>" + esc(x.text) + "</p></div>" +
-      (x.image ? '<button type="button" class="exp-photo" data-src="' + esc(x.image) + '" data-caption="' + esc(x.imageAlt || x.org) +
-        '" aria-label="View photo: ' + esc(x.imageAlt || x.org) + '"><img src="' + esc(x.image) + '" alt="" loading="lazy"></button>' : "") +
+      (imgs.length ? '<div class="exp-photos">' + imgs.map(function (im) {
+        return '<button type="button" class="exp-photo" data-src="' + esc(im.src) + '" data-caption="' + esc(im.alt) +
+          '" aria-label="View photo: ' + esc(im.alt) + '"><img src="' + esc(im.src) + '" alt="" loading="lazy"></button>';
+      }).join("") + "</div>" : "") +
     "</li>";
   }).join("");
 
