@@ -26,9 +26,9 @@ window.PROJECTS = [
     summary:
       "A bilingual Arabic/English web app that raises early awareness of preeclampsia among Saudi and Arab women. I designed a Risk × Reliability × Time framework that shows screening priority, data completeness and pregnancy-stage timing as separate readings instead of one opaque score. Qualified for the next stage of the challenge and received a Certificate of Appreciation.",
     name: "Badira (بادرة)",
+    highlight: "Qualified for the next stage",
     meta: "StartSmart Saudi · 2026",
     short: "Bilingual app that flags preeclampsia risk early, showing risk, data reliability and timing as three separate readings.",
-    cover: { kind: "badira" },
     title: "Badira (بادرة): a preeclampsia early-awareness app",
     course: "StartSmart Saudi University Challenge · Sep–Nov 2026 · with Judy Al-Imam",
     categories: ["ai", "web"],
@@ -46,9 +46,9 @@ window.PROJECTS = [
     summary:
       "Trained and compared eight classifiers across three clinical datasets, stress-tested under class imbalance, label noise and feature drift. Random Forest was the most robust, with 84.7% accuracy and AUC 0.951.",
     name: "Preeclampsia risk prediction",
+    highlight: "AUC 0.951 · 84.7% accuracy",
     meta: "Machine Learning · 2026",
     short: "Eight classifiers stress-tested under imbalance, label noise and drift. Random Forest reached AUC 0.951.",
-    cover: { kind: "roc" },
     title: "Early prediction of preeclampsia from multi-source maternal health data",
     course: "Machine Learning · Spring 2026",
     categories: ["ai", "data"],
@@ -66,9 +66,9 @@ window.PROJECTS = [
     summary:
       "A PySpark and Kafka pipeline that simulates three hospitals and trains with federated learning, so no patient data leaves a hospital. 84.85% accuracy on clean data, losing at most 3 points under noise, label poisoning and missing values.",
     name: "Resilient heart-disease pipeline",
+    highlight: "84.85% accuracy · federated",
     meta: "Big Data Analytics · 2026",
     short: "PySpark + Kafka pipeline across three simulated hospitals with federated learning. 84.85% accuracy, robust under attack.",
-    cover: { kind: "heart" },
     title: "Resilient heart-disease prediction pipeline on big data",
     course: "Big Data Analytics · Spring 2026",
     categories: ["ai", "data"],
@@ -86,9 +86,9 @@ window.PROJECTS = [
     summary:
       "Transfer learning on MobileNetV2 to sort waste into plastic, paper, glass, metal and general trash in real time, trained on TrashNet plus real-world photos.",
     name: "AI smart recycling bin",
+    highlight: "5 waste classes · real time",
     meta: "Artificial Intelligence · 2025",
     short: "MobileNetV2 sorts waste into five classes in real time, trained on TrashNet plus real-world photos.",
-    cover: { kind: "bins" },
     title: "AI-powered recycling bin that sorts waste with MobileNetV2",
     course: "Artificial Intelligence · Fall 2025",
     categories: ["ai"],
@@ -104,9 +104,9 @@ window.PROJECTS = [
   },
   {
     name: "Wearable seizure monitoring",
+    highlight: "Alerts in under 5 seconds",
     meta: "Software Engineering · 2026",
     short: "Wearable EEG, heart-rate and motion sensors feed real-time seizure detection with caregiver alerts.",
-    cover: { kind: "wearable" },
     title: "Smart wearable system for seizure monitoring and emergency response",
     course: "Software Engineering · CS3151",
     categories: ["ai", "web"],
@@ -117,9 +117,9 @@ window.PROJECTS = [
   },
   {
     name: "Campus network design",
+    highlight: "Segmented campus WAN",
     meta: "Computer Networks · 2025",
     short: "Campus network in Cisco Packet Tracer with subnetting, department segmentation and a working WAN.",
-    cover: { kind: "network" },
     title: "University network design and simulation",
     course: "Computer Networks · Spring 2025",
     categories: ["systems"],
@@ -130,9 +130,9 @@ window.PROJECTS = [
   },
   {
     name: "On The Go",
+    highlight: "8 drive-thrus · live site",
     meta: "Web Development · 2024",
     short: "Jeddah drive-thru guide with menus, prices, ratings, reviews, search and favourites.",
-    cover: { kind: "drive" },
     title: "On The Go: drive-thru guide for Jeddah",
     course: "Web Application Development · CS2111 · Fall 2024 · with Judy Al-Imam",
     categories: ["web"],
@@ -151,28 +151,28 @@ window.PAPERS = [
     title: "Early prediction of preeclampsia using multi-source maternal health data",
     finding: "Eight classifiers stress-tested under imbalance, label noise and drift. Random Forest reached 84.7% accuracy and AUC 0.951.",
     authors: "with Sedra Al Jundi and Jwdee Al Amam",
-    cover: { kind: "roc" }, file: "papers/early-prediction-of-preeclampsia.pdf"
+    image: "images/papers/preeclampsia.webp", file: "papers/early-prediction-of-preeclampsia.pdf"
   },
   {
     course: "Big Data Analytics · CS4074", term: "Spring 2026",
     title: "Resilient AI pipeline for heart-disease prediction under adversarial big-data conditions",
     finding: "A PySpark and Kafka pipeline across three simulated hospitals: 84.85% accuracy, losing at most 3 points under attack, with federated learning converging in five rounds.",
     authors: "with Sara Imran",
-    cover: { kind: "heart" }, file: "papers/resilient-heart-disease-pipeline.pdf"
+    image: "images/papers/heart-disease.webp", file: "papers/resilient-heart-disease-pipeline.pdf"
   },
   {
     course: "Data Science · CS3072", term: "Spring 2026",
     title: "Data-driven analysis of EEG signals for epileptic seizure detection",
     finding: "EEG recordings reframed as seizure vs. non-seizure classification. Random Forest detected seizures with 97.4% accuracy.",
     authors: "with Jwdee Al Amam",
-    cover: { kind: "wearable" }, file: "papers/eeg-seizure-detection.pdf"
+    image: "images/papers/eeg-seizure.webp", file: "papers/eeg-seizure-detection.pdf"
   },
   {
     course: "Research Methods · GSEM 201", term: "",
     title: "AI-powered smart recycling bin for sustainable waste management in Saudi Arabia",
     finding: "MobileNetV2 trained on TrashNet plus photos from public places in Saudi Arabia, reaching 78.24% accuracy across five waste classes in real-world conditions.",
     authors: "with Raghad Shamma and Jana Al Ayoobi",
-    cover: { kind: "bins" }, file: "papers/smart-recycling-bin-saudi-arabia.pdf"
+    image: "images/papers/recycling-bin.webp", file: "papers/smart-recycling-bin-saudi-arabia.pdf"
   }
 ];
 
