@@ -229,12 +229,12 @@ window.CERTIFICATES = [
   { group: "ai", title: "Foundations: Data, Data, Everywhere", kind: "Course", issuer: "Google",
     date: "Sep 2025", verify: "https://coursera.org/verify/W9M9321IR47V", image: "images/certs/google-data-everywhere.webp" },
   { group: "competitions", title: "StartSmart Saudi University Challenge: Certificate of Appreciation (team Badira)", kind: "Competition", issuer: "Community Jameel Saudi & Start Smart Saudi", date: "Nov 2026", featured: true },
-  { group: "honors", title: "President's List 2025–2026", kind: "Academic honor", issuer: "Effat University", date: "Sep 2026", featured: true },
+  { group: "honors", title: "President's List 2025–2026", kind: "Academic honor", issuer: "Effat University", date: "Sep 2026", image: "images/certs/presidents-list-2025-2026.webp", featured: true },
   { group: "honors", title: "Dean's List 2024–2025", kind: "Academic honor", issuer: "Effat University", date: "Oct 2025", image: "images/certs/deans-list-2024-2025.webp" },
   { group: "honors", title: "Dean's List 2023–2024", kind: "Academic honor", issuer: "Effat University", date: "Oct 2024" },
   { group: "volunteer", title: "Summer camp assistant: Certificate of Appreciation", kind: "240 hours", issuer: "Manara Sports Academy",
     date: "Aug 2026", image: "images/certs/msa-summer-camp-2026.webp" },
-  { group: "volunteer", title: "Iftar meal distribution 2025 (توزيع الفطور)", kind: "Volunteer · 4 hours", issuer: "Joy of Youth",
+  { group: "volunteer", title: "Iftar meal distribution 2025", kind: "Volunteer · 4 hours", issuer: "Joy of Youth",
     date: "Mar 2025", image: "images/certs/joy-of-youth-iftar-2025.webp" },
   { group: "volunteer", title: "Preparing Ramadan food baskets (أرزاق رمضان)", kind: "Volunteer · 4h 40m", issuer: "Mawakeb Alajer Endowment",
     date: "Mar 2025", image: "images/certs/mawakeb-alajer-arzaq-2025.webp" }
@@ -274,7 +274,7 @@ window.VOLUNTEERING = [
     cause: "Ramadan iftar campaign",
     date: "Mar 2025",
     hours: "4 hours",
-    text: "Distributed iftar meals in the 2025 Ramadan campaign (توزيع الفطور).",
+    text: "Distributed iftar meals in the 2025 Ramadan campaign.",
     images: [
       { src: "images/experience/joy-of-youth.webp", caption: "Joy of Youth volunteers" },
       { src: "images/certs/joy-of-youth-iftar-2025.webp", caption: "Joy of Youth volunteer certificate" }
