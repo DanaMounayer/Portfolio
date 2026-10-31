@@ -228,7 +228,7 @@ window.CERTIFICATES = [
     date: "Oct 2025", image: "images/certs/nmkkn-ui-trends-2025.webp" },
   { group: "ai", title: "Foundations: Data, Data, Everywhere", kind: "Course", issuer: "Google",
     date: "Sep 2025", verify: "https://coursera.org/verify/W9M9321IR47V", image: "images/certs/google-data-everywhere.webp" },
-  { group: "competitions", title: "StartSmart Saudi University Challenge: Certificate of Appreciation (team Badira)", kind: "Competition", issuer: "Community Jameel Saudi & Start Smart Saudi", date: "Nov 2026", featured: true },
+  { group: "competitions", title: "StartSmart Saudi University Challenge: Certificate of Appreciation (team Badira)", kind: "Competition", issuer: "Community Jameel Saudi & Start Smart Saudi", date: "Nov 2026", image: "images/certs/startsmart-badira-2026.webp", featured: true },
   { group: "honors", title: "President's List 2025–2026", kind: "Academic honor", issuer: "Effat University", date: "Sep 2026", image: "images/certs/presidents-list-2025-2026.webp?v=2", featured: true },
   { group: "honors", title: "Dean's List 2024–2025", kind: "Academic honor", issuer: "Effat University", date: "Oct 2025", image: "images/certs/deans-list-2024-2025.webp?v=3" },
   { group: "honors", title: "Dean's List 2023–2024", kind: "Academic honor", issuer: "Effat University", date: "Oct 2024", image: "images/certs/deans-list-2023-2024.webp" },
