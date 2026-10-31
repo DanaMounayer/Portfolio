@@ -97,7 +97,7 @@
       return '<li class="project-row">' +
         "<div><h4>" + esc(p.title) + '</h4><p class="case-course">' + esc(p.course) + "</p></div>" +
         "<div><p>" + esc(p.summary || p.outcome) + "</p>" + tags(p.tech) + "</div>" +
-        "<div>" + repo(p.link, "GitHub") + "</div>" +
+        '<div class="row-links">' + (p.demo ? '<a class="repo-link" href="' + esc(p.demo) + '" target="_blank" rel="noopener">Live site</a>' : "") + repo(p.link, "GitHub") + "</div>" +
       "</li>";
     }).join("") : '<li class="empty">No projects match "' + esc(pState.q) + '". Try another word or choose All.</li>';
   };

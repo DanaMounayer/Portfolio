@@ -106,12 +106,13 @@ window.PROJECTS = [
   },
   {
     title: "On The Go: drive-thru guide for Jeddah",
-    course: "Web Application Development · Fall 2024",
+    course: "Web Application Development · CS2111 · Fall 2024 · with Judy Al-Imam",
     categories: ["web"],
     summary:
-      "A full website that helps people find drive-thrus in Jeddah, with interactive JavaScript features and a database that stores user reviews and ratings.",
-    tech: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
-    link: null
+      "A guide to Jeddah's drive-thrus with full menus and prices, ratings, reviews and a contact form. Rebuilt and redesigned in 2026 with search, category filters, favourites and a review form with star ratings.",
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "SQL"],
+    link: "https://github.com/DanaMounayer/CS2111-Web-Development-Project",
+    demo: "https://danamounayer.github.io/CS2111-Web-Development-Project/"
   }
 ];
 
