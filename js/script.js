@@ -86,20 +86,36 @@
       esc(c.label) + '<span class="count">' + n + "</span></button>";
   }).join("");
 
+  var GH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>';
+  var EXT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
+  var COVERS = {
+    badira: '<div class="proj-cover cover-badira"><span class="cover-ar">بادرة</span><span class="cover-en">Badira</span></div>',
+    network: '<div class="proj-cover cover-network"><svg viewBox="0 0 200 110" aria-hidden="true"><g stroke="currentColor" stroke-width="2" fill="none" opacity=".55"><path d="M100 22 50 60M100 22l50 38M50 60l-28 34M50 60l18 34M150 60l-18 34M150 60l28 34M50 60h100"/></g><g fill="currentColor"><circle cx="100" cy="22" r="9"/><rect x="40" y="51" width="20" height="18" rx="4"/><rect x="140" y="51" width="20" height="18" rx="4"/><circle cx="22" cy="96" r="6"/><circle cx="68" cy="96" r="6"/><circle cx="132" cy="96" r="6"/><circle cx="178" cy="96" r="6"/></g></svg></div>'
+  };
+  var projCard = function (p) {
+    var media = p.image
+      ? '<div class="proj-media"><img src="' + esc(p.image) + '" alt="" loading="lazy"></div>'
+      : (COVERS[p.cover && p.cover.kind] || "");
+    var icons = (p.demo ? '<a class="icon-link" href="' + esc(p.demo) + '" target="_blank" rel="noopener" aria-label="Open live site: ' + esc(p.name) + '" title="Live site">' + EXT + "</a>" : "") +
+      (p.link ? '<a class="icon-link" href="' + esc(p.link) + '" target="_blank" rel="noopener" aria-label="View ' + esc(p.name) + ' on GitHub" title="GitHub">' + GH + "</a>" : "");
+    return '<article class="proj">' + media +
+      '<div class="proj-body">' +
+        '<p class="proj-meta">' + esc(p.meta) + "</p>" +
+        "<h3>" + esc(p.name) + "</h3>" +
+        "<p>" + esc(p.short) + "</p>" +
+        '<div class="proj-foot"><ul class="tags">' + (p.tech || []).slice(0, 2).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>" +
+        '<div class="proj-icons">' + icons + "</div></div>" +
+      "</div></article>";
+  };
   var renderProjects = function () {
     var q = pState.q.toLowerCase();
     var list = all.filter(function (p) {
       var inCat = pState.cat === "all" || p.categories.indexOf(pState.cat) > -1;
-      var text = [p.title, p.course, p.summary, p.approach, (p.tech || []).join(" ")].join(" ").toLowerCase();
+      var text = [p.name, p.title, p.meta, p.short, p.summary, (p.tech || []).join(" ")].join(" ").toLowerCase();
       return inCat && (!q || text.indexOf(q) > -1);
     });
-    listEl.innerHTML = list.length ? list.map(function (p) {
-      return '<li class="project-row">' +
-        "<div><h4>" + esc(p.title) + '</h4><p class="case-course">' + esc(p.course) + "</p></div>" +
-        "<div><p>" + esc(p.summary || p.outcome) + "</p>" + tags(p.tech) + "</div>" +
-        '<div class="row-links">' + (p.demo ? '<a class="repo-link" href="' + esc(p.demo) + '" target="_blank" rel="noopener">Live site</a>' : "") + repo(p.link, "GitHub") + "</div>" +
-      "</li>";
-    }).join("") : '<li class="empty">No projects match "' + esc(pState.q) + '". Try another word or choose All.</li>';
+    listEl.innerHTML = list.length ? list.map(projCard).join("")
+      : '<p class="empty">No projects match "' + esc(pState.q) + '". Try another word or choose All.</p>';
   };
   pFilters.addEventListener("click", function (e) {
     var b = e.target.closest(".filter"); if (!b) return;

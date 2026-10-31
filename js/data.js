@@ -25,6 +25,10 @@ window.PROJECTS = [
   {
     summary:
       "A bilingual Arabic/English web app that raises early awareness of preeclampsia among Saudi and Arab women. I designed a Risk × Reliability × Time framework that shows screening priority, data completeness and pregnancy-stage timing as separate readings instead of one opaque score. Qualified for the next stage of the challenge and received a Certificate of Appreciation.",
+    name: "Badira (بادرة)",
+    meta: "StartSmart Saudi · 2026",
+    short: "Bilingual app that flags preeclampsia risk early, showing risk, data reliability and timing as three separate readings.",
+    cover: { kind: "badira" },
     title: "Badira (بادرة): a preeclampsia early-awareness app",
     course: "StartSmart Saudi University Challenge · Sep–Nov 2026 · with Judy Al-Imam",
     categories: ["ai", "web"],
@@ -41,6 +45,10 @@ window.PROJECTS = [
   {
     summary:
       "Trained and compared eight classifiers across three clinical datasets, stress-tested under class imbalance, label noise and feature drift. Random Forest was the most robust, with 84.7% accuracy and AUC 0.951.",
+    name: "Preeclampsia risk prediction",
+    meta: "Machine Learning · 2026",
+    short: "Eight classifiers stress-tested under imbalance, label noise and drift. Random Forest reached AUC 0.951.",
+    image: "images/papers/preeclampsia.webp",
     title: "Early prediction of preeclampsia from multi-source maternal health data",
     course: "Machine Learning · Spring 2026",
     categories: ["ai", "data"],
@@ -57,6 +65,10 @@ window.PROJECTS = [
   {
     summary:
       "A PySpark and Kafka pipeline that simulates three hospitals and trains with federated learning, so no patient data leaves a hospital. 84.85% accuracy on clean data, losing at most 3 points under noise, label poisoning and missing values.",
+    name: "Resilient heart-disease pipeline",
+    meta: "Big Data Analytics · 2026",
+    short: "PySpark + Kafka pipeline across three simulated hospitals with federated learning. 84.85% accuracy, robust under attack.",
+    image: "images/papers/heart-disease.webp",
     title: "Resilient heart-disease prediction pipeline on big data",
     course: "Big Data Analytics · Spring 2026",
     categories: ["ai", "data"],
@@ -73,6 +85,10 @@ window.PROJECTS = [
   {
     summary:
       "Transfer learning on MobileNetV2 to sort waste into plastic, paper, glass, metal and general trash in real time, trained on TrashNet plus real-world photos.",
+    name: "AI smart recycling bin",
+    meta: "Artificial Intelligence · 2025",
+    short: "MobileNetV2 sorts waste into five classes in real time, trained on TrashNet plus real-world photos.",
+    image: "images/papers/recycling-bin.webp",
     title: "AI-powered recycling bin that sorts waste with MobileNetV2",
     course: "Artificial Intelligence · Fall 2025",
     categories: ["ai"],
@@ -87,6 +103,10 @@ window.PROJECTS = [
     link: "https://github.com/DanaMounayer/CS3081-Artificial-Intelligence-Project"
   },
   {
+    name: "Wearable seizure monitoring",
+    meta: "Software Engineering · 2026",
+    short: "Wearable EEG, heart-rate and motion sensors feed real-time seizure detection with caregiver alerts.",
+    image: "images/papers/eeg-seizure.webp",
     title: "Smart wearable system for seizure monitoring and emergency response",
     course: "Software Engineering · CS3151",
     categories: ["ai", "web"],
@@ -96,6 +116,10 @@ window.PROJECTS = [
     link: null
   },
   {
+    name: "Campus network design",
+    meta: "Computer Networks · 2025",
+    short: "Campus network in Cisco Packet Tracer with subnetting, department segmentation and a working WAN.",
+    cover: { kind: "network" },
     title: "University network design and simulation",
     course: "Computer Networks · Spring 2025",
     categories: ["systems"],
@@ -105,6 +129,10 @@ window.PROJECTS = [
     link: null
   },
   {
+    name: "On The Go",
+    meta: "Web Development · 2024",
+    short: "Jeddah drive-thru guide with menus, prices, ratings, reviews, search and favourites.",
+    image: "images/projects/on-the-go.webp",
     title: "On The Go: drive-thru guide for Jeddah",
     course: "Web Application Development · CS2111 · Fall 2024 · with Judy Al-Imam",
     categories: ["web"],
