@@ -17,8 +17,6 @@
   --accent-2: #0e7c86;
   --edge: #a9bcda;
   --contact-bg: #0b3d91;
-  --glow: rgba(30, 91, 184, .14);
-  --dot: rgba(11, 61, 145, .12);
   --shadow-sm: 0 1px 2px rgba(13, 26, 51, .05), 0 2px 8px rgba(13, 26, 51, .04);
   --shadow-md: 0 14px 34px -12px rgba(13, 26, 51, .22), 0 2px 6px rgba(13, 26, 51, .05);
   color-scheme: light;
@@ -52,8 +50,6 @@
   --accent-2: #5fd3da;
   --edge: #2b4372;
   --contact-bg: #0f1f40;
-  --glow: rgba(95, 140, 255, .16);
-  --dot: rgba(143, 180, 255, .10);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
   --shadow-md: 0 16px 36px -14px rgba(0, 0, 0, .7), 0 0 0 1px rgba(255, 255, 255, .03);
   color-scheme: dark;
@@ -106,12 +102,10 @@ h3 { font-size: var(--step-1); font-weight: 600; }
 .header-row { height: 100%; display: flex; align-items: center; justify-content: space-between; }
 
 .logo {
-  font-family: var(--display); font-weight: 600; font-size: 1.1rem;
-  color: var(--on-accent); background: var(--navy);
-  width: 40px; height: 40px; border-radius: 10px;
-  display: grid; place-items: center; text-decoration: none;
+  font-family: var(--display); font-weight: 600; font-size: 1.1rem; letter-spacing: -0.01em;
+  color: var(--ink); text-decoration: none;
 }
-.logo:hover { color: var(--on-accent); background: var(--blue); }
+.logo:hover { color: var(--navy); }
 
 nav ul { list-style: none; padding: 0; display: flex; gap: 1.75rem; }
 nav a {
@@ -150,15 +144,7 @@ nav a[aria-current="true"] { color: var(--navy); border-bottom-color: var(--navy
 .btn-line:hover { background: var(--navy); color: var(--on-accent); }
 
 /* ---------- Hero ---------- */
-.hero { padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3.5rem, 7vw, 6rem); overflow: hidden; position: relative; isolation: isolate; }
-.hero::before {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background:
-    radial-gradient(ellipse 50% 60% at 78% 40%, var(--glow), transparent 70%),
-    radial-gradient(var(--dot) 1.2px, transparent 1.2px) 0 0 / 22px 22px;
-  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
-          mask-image: linear-gradient(to bottom, #000 60%, transparent);
-}
+.hero { padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3.5rem, 7vw, 6rem); overflow: hidden; }
 .hero-grid {
   display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center;
 }

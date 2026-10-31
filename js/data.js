@@ -108,15 +108,6 @@ window.PROJECTS = [
       "A full website that helps people find drive-thrus in Jeddah, with interactive JavaScript features and a database that stores user reviews and ratings.",
     tech: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
     link: null
-  },
-  {
-    title: "Interactive banking system",
-    course: "Object Oriented Programming · Fall 2024",
-    categories: ["web"],
-    summary:
-      "A Java desktop app with a GUI for opening accounts, transactions, balance checks and transfers, built on OOP principles with validation on every transaction.",
-    tech: ["Java", "OOP", "Swing GUI"],
-    link: null
   }
 ];
 
@@ -163,7 +154,7 @@ window.SEMESTERS = [
 
 window.CERT_GROUPS = [
   { id: "all", label: "All" },
-  { id: "ai", label: "AI, data & programming" },
+  { id: "ai", label: "Technical courses" },
   { id: "competitions", label: "Competitions" },
   { id: "honors", label: "Academic honors" },
   { id: "volunteer", label: "Volunteering & community" }
@@ -187,6 +178,8 @@ window.CERTIFICATES = [
       { src: "images/certs/anthropic-claude-code-in-action.webp", caption: "Claude Code in Action" },
       { src: "images/certs/anthropic-intro-claude-cowork.webp", caption: "Introduction to Claude Cowork" }
     ] },
+  { group: "ai", title: "User-facing trends 2025 (ترندات واجهة المستخدم)", kind: "Course · 1 hour", issuer: "NMKKN (نمكّن)",
+    date: "Oct 2025", image: "images/certs/nmkkn-ui-trends-2025.webp" },
   { group: "ai", title: "Foundations: Data, Data, Everywhere", kind: "Course", issuer: "Google",
     date: "Sep 2025", verify: "https://coursera.org/verify/W9M9321IR47V", image: "images/certs/google-data-everywhere.webp" },
   { group: "competitions", title: "StartSmart Saudi University Challenge: Certificate of Appreciation (team Badira)", kind: "Competition", issuer: "Community Jameel Saudi & Start Smart Saudi", date: "Nov 2026", featured: true },
@@ -222,7 +215,7 @@ window.VOLUNTEERING = [
   {
     org: "Help Center Company",
     cause: "Children",
-    date: "",
+    date: "Dec 2025",
     text: "Volunteered with the Effat University team at the \u201cLet\u2019s Walk the Walk\u201d marathon, cheering on the young runners along the route.",
     images: [
       { src: "images/experience/help-center-marathon.webp", caption: "High-fiving a young runner at the marathon" },
