@@ -109,7 +109,7 @@ window.PROJECTS = [
     course: "Web Application Development · CS2111 · Fall 2024 · with Judy Al-Imam",
     categories: ["web"],
     summary:
-      "A guide to Jeddah's drive-thrus with full menus and prices, ratings, reviews and a contact form. Rebuilt and redesigned in 2026 with search, category filters, favourites and a review form with star ratings.",
+      "A guide to Jeddah's drive-thrus with full menus and prices, ratings and reviews. Visitors can search by dish, filter by category, save favourites, post reviews with star ratings and send messages through a validated contact form.",
     tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "SQL"],
     link: "https://github.com/DanaMounayer/CS2111-Web-Development-Project",
     demo: "https://danamounayer.github.io/CS2111-Web-Development-Project/"
