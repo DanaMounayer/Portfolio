@@ -203,11 +203,17 @@
   }).join("");
 
   /* ---------- Papers ---------- */
-  $("#papers").innerHTML = (window.PAPERS || []).map(function (p) {
-    var action = p.link
-      ? '<a class="repo-link" href="' + esc(p.link) + '" target="_blank" rel="noopener">' + esc(p.linkLabel || "Read paper") + "</a>"
-      : '<a class="repo-link" href="mailto:dana.mounayer@gmail.com?subject=' + encodeURIComponent("Paper: " + p.title) + '">Request a copy</a>';
-    return '<article class="paper"><h3>' + esc(p.title) + "</h3><p>" + esc(p.summary) + "</p>" + action + "</article>";
+  $("#papers").innerHTML = (window.PAPERS || []).map(function (p, k) {
+    return '<article class="paper' + (k === 0 ? " paper-lead" : "") + '">' +
+      '<a class="paper-figure" href="' + esc(p.file) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">' +
+        '<img src="' + esc(p.image) + '" alt="" loading="lazy"></a>' +
+      '<div class="paper-body">' +
+        '<p class="paper-meta"><span>' + esc(p.course) + "</span><span>" + esc(p.term) + "</span></p>" +
+        "<h3>" + esc(p.title) + "</h3>" +
+        "<p>" + esc(p.finding) + "</p>" +
+        (p.authors ? '<p class="paper-authors">' + esc(p.authors) + "</p>" : "") +
+        '<a class="repo-link" href="' + esc(p.file) + '" target="_blank" rel="noopener">Read the paper (PDF)</a>' +
+      "</div></article>";
   }).join("");
 
   /* ---------- Skills: a small neural network ---------- */

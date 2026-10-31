@@ -62,8 +62,8 @@ window.PROJECTS = [
     approach:
       "Built a PySpark pipeline that simulates several hospitals as separate data partitions. Kafka streams records in real time, and federated learning trains across hospitals without centralising patient data. I then attacked it with missing values, noise, label flipping and inconsistent records.",
     outcome:
-      "Accuracy held at about 76% under adversarial stress, compared with about 78% on clean data.",
-    result: { value: "76%", label: "accuracy under adversarial stress, vs 78% on clean data" },
+      "84.85% accuracy on clean data, and the pipeline degraded gracefully under attack: the worst case, 5% label poisoning, still reached 81.9%. Federated training converged in five rounds.",
+    result: { value: "84.85%", label: "accuracy on clean data, never dropping more than 3 points under attack" },
     tech: ["PySpark", "Spark MLlib", "Kafka", "Federated learning", "Pandas", "NumPy"],
     link: "https://github.com/DanaMounayer/CS4074-Big-Data-Analytics-Project"
   },
@@ -111,25 +111,42 @@ window.PROJECTS = [
   }
 ];
 
+/* Research papers. "image" is a figure from the paper; "file" is the PDF in /papers. */
 window.PAPERS = [
   {
+    course: "Machine Learning · CS4082", term: "Spring 2026",
     title: "Early prediction of preeclampsia using multi-source maternal health data",
-    summary:
-      "A multi-source ML framework evaluated under class imbalance, label noise and feature drift. Random Forest reached 84.7% accuracy and AUC 0.951.",
-    link: "https://github.com/DanaMounayer/CS4082-Machine-Learning-Project",
-    linkLabel: "View on GitHub"
+    finding: "Eight classifiers stress-tested under imbalance, label noise and drift. Random Forest reached 84.7% accuracy and AUC 0.951.",
+    authors: "with Sedra Al Jundi and Jwdee Al Amam",
+    image: "images/papers/preeclampsia.webp", file: "papers/early-prediction-of-preeclampsia.pdf"
   },
   {
-    title: "AI-based waste sorting system",
-    summary:
-      "A smart recycling system that identifies and sorts five types of waste using transfer learning on MobileNetV2.",
-    link: null
+    course: "Big Data Analytics · CS4074", term: "Spring 2026",
+    title: "Resilient AI pipeline for heart-disease prediction under adversarial big-data conditions",
+    finding: "A PySpark and Kafka pipeline across three simulated hospitals: 84.85% accuracy, losing at most 3 points under attack, with federated learning converging in five rounds.",
+    authors: "with Sara Imran",
+    image: "images/papers/heart-disease.webp", file: "papers/resilient-heart-disease-pipeline.pdf"
   },
   {
-    title: "Memory management in modern operating systems",
-    summary:
-      "A comparative study of three recent memory systems (Carbink, Memstrata and BlackBox) and how each tackles reliability, performance and security.",
-    link: null
+    course: "Data Science · CS3072", term: "Spring 2026",
+    title: "Data-driven analysis of EEG signals for epileptic seizure detection",
+    finding: "EEG recordings reframed as seizure vs. non-seizure classification. Random Forest detected seizures with 97.4% accuracy.",
+    authors: "with Jwdee Al Amam",
+    image: "images/papers/eeg-seizure.webp", file: "papers/eeg-seizure-detection.pdf"
+  },
+  {
+    course: "Research Methods · GSEM 201", term: "",
+    title: "AI-powered smart recycling bin for sustainable waste management in Saudi Arabia",
+    finding: "MobileNetV2 trained on TrashNet plus photos from public places in Saudi Arabia, reaching 78.24% accuracy across five waste classes in real-world conditions.",
+    authors: "with Raghad Shamma and Jana Al Ayoobi",
+    image: "images/papers/recycling-bin.webp", file: "papers/smart-recycling-bin-saudi-arabia.pdf"
+  },
+  {
+    course: "Review paper", term: "2025–2026",
+    title: "Impact of AI and machine learning in gynecology",
+    finding: "A review of AI across risk prediction, diagnostic imaging, precision medicine and surgical support, and the ethics of bringing it into care.",
+    authors: "",
+    image: "images/papers/gynecology.webp", file: "papers/impact-of-ai-in-gynecology.pdf"
   }
 ];
 
