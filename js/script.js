@@ -353,3 +353,46 @@
 
   $("#year").textContent = new Date().getFullYear();
 })();
+
+/* hero light waves */
+(function () {
+  var c = document.querySelector(".hero .waves");
+  if (!c || !c.getContext) return;
+  var x = c.getContext("2d"), W = 0, H = 0, t = 0, dpr = 1, visible = true, raf = 0;
+  var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = c.width = c.offsetWidth * dpr; H = c.height = c.offsetHeight * dpr;
+    draw();
+  }
+  function draw() {
+    x.clearRect(0, 0, W, H);
+    var g = x.createLinearGradient(0, 0, W, 0);
+    g.addColorStop(0, "rgba(91,140,255,0)"); g.addColorStop(.3, "rgba(143,180,255,.9)");
+    g.addColorStop(.65, "rgba(180,140,255,.9)"); g.addColorStop(1, "rgba(95,211,218,0)");
+    x.strokeStyle = g; x.lineWidth = 1.3 * dpr;
+    var base = H * (W < 700 * dpr ? .9 : .8);
+    for (var k = 0; k < 18; k++) {
+      x.globalAlpha = .1 + .03 * (k % 5); x.beginPath();
+      for (var px = 0; px <= W; px += 6) {
+        var u = px / W;
+        var y = base + k * 5 * dpr + Math.sin(u * 5.5 + t * .6 + k * .2) * (50 + k * 2.5) * dpr * Math.sin(u * Math.PI)
+              + Math.sin(u * 12 - t * .9 + k * .4) * 7 * dpr;
+        if (px) x.lineTo(px, y); else x.moveTo(px, y);
+      }
+      x.stroke();
+    }
+    x.globalAlpha = 1;
+  }
+  function loop() { t += .016; draw(); raf = visible ? requestAnimationFrame(loop) : 0; }
+  window.addEventListener("resize", size);
+  size();
+  if (still) return;
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) {
+      visible = e[0].isIntersecting;
+      if (visible && !raf) raf = requestAnimationFrame(loop);
+    }).observe(c);
+  }
+  raf = requestAnimationFrame(loop);
+})();
