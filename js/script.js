@@ -38,6 +38,8 @@
   var progress = $(".dock-progress");
   var onScroll = function () {
     header.classList.toggle("scrolled", window.scrollY > 8);
+    var heroEl = document.getElementById("home");
+    header.classList.toggle("on-hero", !!heroEl && window.scrollY < heroEl.offsetHeight - 40);
     var max = document.documentElement.scrollHeight - window.innerHeight;
     progress.style.setProperty("--p", max > 0 ? Math.min(1, window.scrollY / max) : 0);
   };
