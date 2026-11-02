@@ -99,7 +99,7 @@ window.PROJECTS = [
     approach:
       "Used transfer learning on MobileNetV2 to classify waste into plastic, paper, glass, metal and general trash in real time. Trained on TrashNet and added real-world photos so the model generalises beyond studio images.",
     outcome:
-      "A lightweight model fast enough for an on-device bin, written up as a team research paper.",
+      "78.24% accuracy, up from 57% for a CNN trained from scratch, at about 138 images per second: fast enough for a real-time bin. Written up as a research paper with Raghad Shamma.",
     result: { value: "5", label: "waste classes sorted in real time" },
     tech: ["Python", "Computer Vision", "Transfer Learning", "CNNs"],
     link: "https://github.com/DanaMounayer/CS3081-Artificial-Intelligence-Project"
@@ -171,11 +171,11 @@ window.PAPERS = [
     image: "images/papers/eeg-seizure.webp", file: "papers/eeg-seizure-detection.pdf"
   },
   {
-    course: "Research Methods · GSEM 201", term: "",
-    title: "AI-powered smart recycling bin for sustainable waste management in Saudi Arabia",
-    finding: "MobileNetV2 trained on TrashNet plus photos from public places in Saudi Arabia, reaching 78.24% accuracy across five waste classes in real-world conditions.",
-    authors: "with Raghad Shamma and Jana Al Ayoobi",
-    image: "images/papers/recycling-bin.webp", file: "papers/smart-recycling-bin-saudi-arabia.pdf"
+    course: "Artificial Intelligence · CS3081", term: "Fall 2025",
+    title: "AI-powered recycling bin: waste sorting with MobileNetV2",
+    finding: "MobileNetV2 transfer learning on TrashNet plus real-world photos sorts waste into five classes, reaching 78.24% accuracy at about 138 images per second.",
+    authors: "with Raghad Shamma",
+    image: "images/papers/recycling-bin.webp", file: "papers/ai-recycling-bin-mobilenetv2.pdf"
   }
 ];
 
