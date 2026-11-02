@@ -107,7 +107,14 @@
 
   var GH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>';
   var EXT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
-  var CAT_LABEL = { ai: "AI & ML", data: "Data", web: "Web & software", systems: "Networks" };
+  var CAT_LABEL = { ai: "AI & ML", data: "Data", web: "Web & Software", systems: "Networks" };
+  var SV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">';
+  var CAT_ICON = {
+    ai: SV + '<path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>',
+    data: SV + '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+    web: SV + '<path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>',
+    systems: SV + '<circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5l-5.5 5.5M12 11.5l5.5 5.5"/></svg>'
+  };
   var projCard = function (p, k) {
     var icons = (p.link ? '<a class="icon-link" href="' + esc(p.link) + '" target="_blank" rel="noopener" aria-label="View ' + esc(p.name) + ' on GitHub" title="GitHub">' + GH + "</a>" : "");
     var cat = p.categories[0];
@@ -115,7 +122,7 @@
       ? '<a class="proj-title-link" href="' + esc(p.demo) + '" target="_blank" rel="noopener">' + esc(p.name) + "</a>"
       : esc(p.name);
     return '<article class="proj cat-' + cat + (p.demo ? " is-live" : "") + '">' +
-      '<div class="proj-top"><span class="proj-cat">' + esc(CAT_LABEL[cat] || "") + "</span>" +
+      '<div class="proj-top"><span class="proj-badge" aria-hidden="true">' + (CAT_ICON[cat] || "") + '</span><span class="proj-cat">' + esc(CAT_LABEL[cat] || "") + "</span>" +
         '<span class="proj-meta">' + esc(p.meta) + "</span></div>" +
       "<h3>" + titleHtml + "</h3>" +
       "<p>" + esc(p.short) + "</p>" +

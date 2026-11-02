@@ -17,8 +17,8 @@ window.CATEGORIES = [
   { id: "all", label: "All" },
   { id: "ai", label: "AI & ML" },
   { id: "data", label: "Data" },
-  { id: "web", label: "Web & software" },
-  { id: "systems", label: "Systems & networks" }
+  { id: "web", label: "Web & Software" },
+  { id: "systems", label: "Systems & Networks" }
 ];
 
 window.PROJECTS = [
@@ -39,7 +39,7 @@ window.PROJECTS = [
     outcome:
       "A working prototype that produces a structured summary to share with a healthcare provider. We qualified for the next stage after local judging and received a Certificate of Appreciation.",
     result: { value: "3 readings", label: "risk, reliability and timing, instead of one opaque score" },
-    tech: ["Web app", "Arabic / English", "Risk framework", "Healthcare AI", "Pitching"],
+    tech: ["Web App", "Arabic / English", "Risk Framework", "Healthcare AI", "Pitching"],
     demo: "https://badira-ai.netlify.app/",
     demoLabel: "Try the prototype",
     link: "https://github.com/DanaMounayer/Start-Smart-Badira"
@@ -47,7 +47,7 @@ window.PROJECTS = [
   {
     summary:
       "Trained and compared eight classifiers across three clinical datasets, stress-tested under class imbalance, label noise and feature drift. Random Forest was the most robust, with 84.7% accuracy and AUC 0.951.",
-    name: "Preeclampsia risk prediction",
+    name: "Preeclampsia Risk Prediction",
     highlight: "AUC 0.951 · 84.7% accuracy",
     meta: "Machine Learning · 2026",
     short: "Eight classifiers stress-tested under imbalance, label noise and drift. Random Forest reached AUC 0.951.",
@@ -67,7 +67,7 @@ window.PROJECTS = [
   {
     summary:
       "A PySpark and Kafka pipeline that simulates three hospitals and trains with federated learning, so no patient data leaves a hospital. 84.85% accuracy on clean data, losing at most 3 points under noise, label poisoning and missing values.",
-    name: "Resilient heart-disease pipeline",
+    name: "Resilient Heart-Disease Pipeline",
     highlight: "84.85% accuracy · federated",
     meta: "Big Data Analytics · 2026",
     short: "PySpark + Kafka pipeline across three simulated hospitals with federated learning. 84.85% accuracy, robust under attack.",
@@ -81,13 +81,13 @@ window.PROJECTS = [
     outcome:
       "84.85% accuracy on clean data, and the pipeline degraded gracefully under attack: the worst case, 5% label poisoning, still reached 81.9%. Federated training converged in five rounds.",
     result: { value: "84.85%", label: "accuracy on clean data, never dropping more than 3 points under attack" },
-    tech: ["PySpark", "Spark MLlib", "Kafka", "Federated learning", "Pandas", "NumPy"],
+    tech: ["PySpark", "Spark MLlib", "Kafka", "Federated Learning", "Pandas", "NumPy"],
     link: "https://github.com/DanaMounayer/CS4074-Big-Data-Analytics-Project"
   },
   {
     summary:
       "Transfer learning on MobileNetV2 to sort waste into plastic, paper, glass, metal and general trash in real time, trained on TrashNet plus real-world photos.",
-    name: "AI smart recycling bin",
+    name: "AI Smart Recycling Bin",
     highlight: "5 waste classes · real time",
     meta: "Artificial Intelligence · 2025",
     short: "MobileNetV2 sorts waste into five classes in real time, trained on TrashNet plus real-world photos.",
@@ -101,11 +101,11 @@ window.PROJECTS = [
     outcome:
       "A lightweight model fast enough for an on-device bin, written up as a team research paper.",
     result: { value: "5", label: "waste classes sorted in real time" },
-    tech: ["Python", "Computer vision", "Transfer learning", "CNNs"],
+    tech: ["Python", "Computer Vision", "Transfer Learning", "CNNs"],
     link: "https://github.com/DanaMounayer/CS3081-Artificial-Intelligence-Project"
   },
   {
-    name: "Wearable seizure monitoring",
+    name: "Wearable Seizure Monitoring",
     highlight: "Alerts in under 5 seconds",
     meta: "Software Engineering · 2026",
     short: "Wearable EEG, heart-rate and motion sensors feed real-time seizure detection with caregiver alerts.",
@@ -114,11 +114,11 @@ window.PROJECTS = [
     categories: ["ai", "web"],
     summary:
       "Designed a mobile app connected to wearable sensors (EEG, heart rate, motion) for real-time, AI-based seizure detection and alerts, with a layered, modular architecture using MVC and Observer patterns, targeting alerts in under 5 seconds and 99% reliability.",
-    tech: ["Mobile app", "Wearable sensors", "MVC", "Observer pattern", "Real-time alerts"],
+    tech: ["Mobile App", "Wearable Sensors", "MVC", "Observer Pattern", "Real-time Alerts"],
     link: null
   },
   {
-    name: "Campus network design",
+    name: "Campus Network Design",
     highlight: "Segmented campus WAN",
     meta: "Computer Networks · 2025",
     short: "Campus network in Cisco Packet Tracer with subnetting, department segmentation and a working WAN.",
