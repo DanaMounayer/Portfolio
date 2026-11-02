@@ -396,3 +396,11 @@
   }
   raf = requestAnimationFrame(loop);
 })();
+
+/* back to top button */
+(function () {
+  var b = document.querySelector(".to-top");
+  if (!b) return;
+  function f() { b.classList.toggle("show", window.scrollY > 700); }
+  window.addEventListener("scroll", f, { passive: true }); f();
+})();

@@ -658,3 +658,12 @@ button.cert-thumb.stack:hover .s3 { transform: translateX(6%) rotate(12deg); }
   .contact-tiles { grid-template-columns: 1fr; }
   .contact-cv { grid-column: auto; }
 }
+
+/* back to top */
+.to-top { position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); z-index: 40;
+  width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; color: #fff;
+  background: linear-gradient(135deg, #5b8cff, #8a63f0); box-shadow: 0 12px 28px -10px rgba(123,77,216,.8);
+  opacity: 0; transform: translateY(12px) scale(.9); pointer-events: none; transition: opacity .25s, transform .25s; }
+.to-top svg { width: 22px; height: 22px; }
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { transform: translateY(-3px); }
