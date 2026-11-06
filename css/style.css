@@ -400,6 +400,14 @@ nav a[aria-current="true"] { color: var(--on-accent); }
   padding: .5rem 1rem; border-radius: 10px; text-decoration: none;
 }
 .proj-live:hover { color: var(--on-accent); filter: brightness(1.1); }
+.proj-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: .2rem; }
+.proj-actions .proj-live { margin-top: 0; }
+.proj-photos {
+  position: relative; z-index: 1; font: inherit; font-weight: 600; font-size: .92rem; cursor: pointer;
+  padding: .5rem 1rem; border-radius: 10px; color: var(--navy); background: transparent; border: 1px solid var(--line);
+}
+.proj-photos:hover { border-color: currentColor; }
+.projects-dark .proj-photos { color: #e8eefb; border-color: rgba(255,255,255,.22); }
 @media (max-width: 960px) { .proj-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .proj-grid { grid-template-columns: 1fr; } }
 
