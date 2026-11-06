@@ -440,7 +440,17 @@ nav a[aria-current="true"] { color: var(--on-accent); }
 .exp { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
 .exp-date { color: var(--navy); font-weight: 600; }
 .exp-body h3 { font-size: var(--step-1); }
-.exp-org { color: var(--muted); margin: .15rem 0 .5rem; }
+.exp-org { color: var(--muted); margin: .15rem 0 0; }
+.exp-head { display: flex; align-items: center; gap: 1rem; margin-bottom: .6rem; }
+.exp-logo {
+  flex: none; width: 56px; height: 56px; border-radius: 14px; overflow: hidden; background: #fff;
+  border: 1px solid var(--line); box-shadow: 0 1px 2px rgba(15, 30, 60, .06), 0 4px 12px rgba(15, 30, 60, .06);
+}
+.exp-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+@media (max-width: 600px) {
+  .exp { grid-template-columns: 1fr; gap: .5rem; }
+  .exp-logo { width: 48px; height: 48px; border-radius: 12px; }
+}
 .exp-body p { max-width: 66ch; }
 .exp-proof { margin-top: .6rem; padding: 0; border: 0; background: none; font: inherit; font-weight: 600; font-size: var(--step--1); color: var(--accent-2); cursor: pointer; }
 .exp-proof:hover { text-decoration: underline; }

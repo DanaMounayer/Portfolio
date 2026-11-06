@@ -257,12 +257,14 @@ window.EXPERIENCE = [
     date: "2026–2027",
     role: "Artificial Intelligence Specialization",
     org: "KAUST Academy, King Abdullah University of Science and Technology",
+    logo: "images/logos/kaust-academy.webp",
     text: "Accepted into the KAUST Academy AI Specialization for 2026–2027. The online stage covers Introduction to Modern AI, with extra modules in Python and Linear Algebra."
   },
   {
     date: "Nov 2026",
     role: "Member",
     org: "Wadi Jeddah Student Club, Wadi Jeddah Innovation Hub",
+    logo: "images/logos/wadi-jeddah.webp",
     text: "Accepted as a member of the student club of Wadi Jeddah, the innovation hub powered by King Abdulaziz University.",
     images: [{ src: "images/experience/wadi-jeddah-acceptance.webp", caption: "Wadi Jeddah Student Club acceptance" }],
     imagesLabel: "View acceptance"
@@ -271,6 +273,7 @@ window.EXPERIENCE = [
     date: "Summer 2026",
     role: "Summer camp assistant",
     org: "Manara Sports Academy (MSA) Summer Camp",
+    logo: "images/logos/msa.webp",
     text: "Gave 240 hours helping supervise and run daily sports and recreational activities for children, and received a Certificate of Appreciation."
   }
 ];
