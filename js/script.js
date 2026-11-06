@@ -201,7 +201,10 @@
   $("#experience-list").innerHTML = (window.EXPERIENCE || []).map(function (x) {
     return '<li class="exp">' +
       '<p class="exp-date">' + esc(x.date) + "</p>" +
-      '<div class="exp-body"><h3>' + esc(x.role) + '</h3><p class="exp-org">' + esc(x.org) + "</p><p>" + esc(x.text) + "</p>" +
+      '<div class="exp-body"><div class="exp-head">' +
+        (x.logo ? '<span class="exp-logo"><img src="' + esc(x.logo) + '" alt="' + esc(x.logoAlt || x.org) + ' logo" width="56" height="56" loading="lazy"></span>' : "") +
+        '<div><h3>' + esc(x.role) + '</h3><p class="exp-org">' + esc(x.org) + "</p></div></div>" +
+        '<p class="exp-text">' + esc(x.text) + "</p>" +
         (x.images && x.images.length ? '<button type="button" class="exp-proof" data-gallery="' + registerGallery(x.images) + '">' + esc(x.imagesLabel || "View photos") + "</button>" : "") +
       "</div>" +
     "</li>";
