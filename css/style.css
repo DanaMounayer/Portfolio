@@ -433,7 +433,9 @@ nav a[aria-current="true"] { color: var(--on-accent); }
 .exp-date { color: var(--navy); font-weight: 600; }
 .exp-body h3 { font-size: var(--step-1); }
 .exp-org { color: var(--muted); margin: .15rem 0 .5rem; }
-.exp-body p:last-child { max-width: 66ch; }
+.exp-body p { max-width: 66ch; }
+.exp-proof { margin-top: .6rem; padding: 0; border: 0; background: none; font: inherit; font-weight: 600; font-size: var(--step--1); color: var(--accent-2); cursor: pointer; }
+.exp-proof:hover { text-decoration: underline; }
 
 .sub-title { font-size: var(--step-2); font-weight: 600; margin: 3.5rem 0 1.25rem; }
 
