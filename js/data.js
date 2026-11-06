@@ -24,9 +24,9 @@ window.CATEGORIES = [
 window.PROJECTS = [
   {
     summary:
-      "A bilingual Arabic/English web app that raises early awareness of preeclampsia among Saudi and Arab women. I designed a Risk × Reliability × Time framework that shows screening priority, data completeness and pregnancy-stage timing as separate readings instead of one opaque score. Qualified for the next stage of the challenge and received a Certificate of Appreciation.",
+      "A bilingual Arabic/English web app that raises early awareness of preeclampsia among Saudi and Arab women. I designed a Risk × Reliability × Time framework that shows screening priority, data completeness and pregnancy-stage timing as separate readings instead of one opaque score. We made it through to the final stage of the challenge and pitched there, and received a Certificate of Appreciation.",
     name: "Badira (بادرة)",
-    highlight: "Qualified for the next stage",
+    highlight: "Finalist · pitched at the final stage",
     meta: "StartSmart Saudi · 2026",
     short: "Bilingual app that flags preeclampsia risk early, showing risk, data reliability and timing as three separate readings.",
     title: "Badira (بادرة): a preeclampsia early-awareness app",
@@ -37,7 +37,7 @@ window.PROJECTS = [
     approach:
       "We built a bilingual Arabic/English web app that raises early awareness of preeclampsia among Saudi and Arab women. I designed a Risk × Reliability × Time framework that shows screening priority, data completeness and pregnancy-stage timing as three separate readings instead of one opaque score.",
     outcome:
-      "A working prototype that produces a structured summary to share with a healthcare provider. We qualified for the next stage after local judging and received a Certificate of Appreciation.",
+      "A working prototype that produces a structured summary to share with a healthcare provider. We qualified through local judging to the final stage, pitched Badira to the judges and received a Certificate of Appreciation.",
     result: { value: "3 readings", label: "risk, reliability and timing, instead of one opaque score" },
     tech: ["Web App", "Arabic / English", "Risk Framework", "Healthcare AI", "Pitching"],
     demo: "https://badira-ai.netlify.app/",
@@ -234,7 +234,12 @@ window.CERTIFICATES = [
     date: "Oct 2025", image: "images/certs/nmkkn-ui-trends-2025.webp" },
   { group: "ai", title: "Foundations: Data, Data, Everywhere", kind: "Course", issuer: "Google",
     date: "Sep 2025", verify: "https://coursera.org/verify/W9M9321IR47V", image: "images/certs/google-data-everywhere.webp" },
-  { group: "competitions", title: "StartSmart Saudi University Challenge: Certificate of Appreciation (team Badira)", kind: "Competition", issuer: "Community Jameel Saudi & Start Smart Saudi", date: "Nov 2026", image: "images/certs/startsmart-badira-2026.webp?v=2", featured: true },
+  { group: "competitions", title: "StartSmart Saudi University Challenge: finalist (team Badira)", kind: "Competition · final stage", issuer: "Community Jameel Saudi & Start Smart Saudi", date: "Nov 2026", featured: true,
+    note: "Pitched Badira at the final stage and received a Certificate of Appreciation.",
+    images: [
+      { src: "images/certs/startsmart-badira-2026.webp?v=2", caption: "StartSmart Certificate of Appreciation, team Badira" },
+      { src: "images/certs/startsmart-final-2026.webp", caption: "The finalists and organisers at the StartSmart final stage" }
+    ] },
   { group: "honors", title: "President's List 2025–2026", kind: "Academic honor", issuer: "Effat University", date: "Sep 2026", image: "images/certs/presidents-list-2025-2026.webp?v=2", featured: true },
   { group: "honors", title: "Dean's List 2024–2025", kind: "Academic honor", issuer: "Effat University", date: "Oct 2025", image: "images/certs/deans-list-2024-2025.webp?v=4" },
   { group: "honors", title: "Dean's List 2023–2024", kind: "Academic honor", issuer: "Effat University", date: "Oct 2024", image: "images/certs/deans-list-2023-2024.webp" },
@@ -246,8 +251,23 @@ window.CERTIFICATES = [
     date: "Mar 2025", image: "images/certs/mawakeb-alajer-arzaq-2025.webp" }
 ];
 
-/* Work experience, newest first. */
+/* Work experience, programs and memberships, newest first.
+   "images" is optional: adds a link that opens them in the viewer. */
 window.EXPERIENCE = [
+  {
+    date: "2026–2027",
+    role: "Artificial Intelligence Specialization",
+    org: "KAUST Academy, King Abdullah University of Science and Technology",
+    text: "Accepted into the KAUST Academy AI Specialization for 2026–2027. The online stage covers Introduction to Modern AI, with extra modules in Python and Linear Algebra."
+  },
+  {
+    date: "Nov 2026",
+    role: "Member",
+    org: "Wadi Jeddah Student Club, Wadi Jeddah Innovation Hub",
+    text: "Accepted as a member of the student club of Wadi Jeddah, the innovation hub powered by King Abdulaziz University.",
+    images: [{ src: "images/experience/wadi-jeddah-acceptance.webp", caption: "Wadi Jeddah Student Club acceptance" }],
+    imagesLabel: "View acceptance"
+  },
   {
     date: "Summer 2026",
     role: "Summer camp assistant",

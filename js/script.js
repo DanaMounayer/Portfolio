@@ -198,7 +198,9 @@
   $("#experience-list").innerHTML = (window.EXPERIENCE || []).map(function (x) {
     return '<li class="exp">' +
       '<p class="exp-date">' + esc(x.date) + "</p>" +
-      '<div class="exp-body"><h3>' + esc(x.role) + '</h3><p class="exp-org">' + esc(x.org) + "</p><p>" + esc(x.text) + "</p></div>" +
+      '<div class="exp-body"><h3>' + esc(x.role) + '</h3><p class="exp-org">' + esc(x.org) + "</p><p>" + esc(x.text) + "</p>" +
+        (x.images && x.images.length ? '<button type="button" class="exp-proof" data-gallery="' + registerGallery(x.images) + '">' + esc(x.imagesLabel || "View photos") + "</button>" : "") +
+      "</div>" +
     "</li>";
   }).join("");
 
@@ -320,7 +322,7 @@
   var certCard = function (c) {
     var thumb;
     if (c._list.length > 1) {
-      thumb = '<button type="button" class="cert-thumb stack" data-gallery="' + c._gallery + '" aria-label="View ' + c._list.length + " certificates: " + esc(c.title) + '">' +
+      thumb = '<button type="button" class="cert-thumb stack" data-gallery="' + c._gallery + '" aria-label="View ' + c._list.length + " images: " + esc(c.title) + '">' +
         c._list.slice(0, 4).map(function (im, k) { return '<img class="s' + k + '" src="' + esc(im.src) + '" alt="" loading="lazy">'; }).join("") +
         "</button>";
     } else if (c._list.length) {
