@@ -42,6 +42,8 @@ window.PROJECTS = [
     tech: ["Web App", "Arabic / English", "Risk Framework", "Healthcare AI", "Pitching"],
     demo: "https://badira-ai.netlify.app/",
     demoLabel: "Try the prototype",
+    photos: [{ src: "images/experience/startsmart-final-2026.webp", caption: "Finalists and organisers at the StartSmart final stage" }],
+    photosLabel: "Photo from the final",
     link: "https://github.com/DanaMounayer/Start-Smart-Badira"
   },
   {
@@ -236,10 +238,7 @@ window.CERTIFICATES = [
     date: "Sep 2025", verify: "https://coursera.org/verify/W9M9321IR47V", image: "images/certs/google-data-everywhere.webp" },
   { group: "competitions", title: "StartSmart Saudi University Challenge: finalist (team Badira)", kind: "Competition · final stage", issuer: "Community Jameel Saudi & Start Smart Saudi", date: "Nov 2026", featured: true,
     note: "Pitched Badira at the final stage and received a Certificate of Appreciation.",
-    images: [
-      { src: "images/certs/startsmart-badira-2026.webp?v=2", caption: "StartSmart Certificate of Appreciation, team Badira" },
-      { src: "images/certs/startsmart-final-2026.webp", caption: "The finalists and organisers at the StartSmart final stage" }
-    ] },
+image: "images/certs/startsmart-badira-2026.webp?v=2" },
   { group: "honors", title: "President's List 2025–2026", kind: "Academic honor", issuer: "Effat University", date: "Sep 2026", image: "images/certs/presidents-list-2025-2026.webp?v=2", featured: true },
   { group: "honors", title: "Dean's List 2024–2025", kind: "Academic honor", issuer: "Effat University", date: "Oct 2025", image: "images/certs/deans-list-2024-2025.webp?v=4" },
   { group: "honors", title: "Dean's List 2023–2024", kind: "Academic honor", issuer: "Effat University", date: "Oct 2024", image: "images/certs/deans-list-2023-2024.webp" },

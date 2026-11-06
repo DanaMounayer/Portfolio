@@ -129,7 +129,10 @@
       (p.highlight ? '<p class="proj-highlight">' + esc(p.highlight) + "</p>" : "") +
       '<div class="proj-foot"><ul class="tags">' + (p.tech || []).slice(0, p.tagCount || 2).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>" +
         '<div class="proj-icons">' + icons + "</div></div>" +
-      (p.demo ? '<a class="proj-live" href="' + esc(p.demo) + '" target="_blank" rel="noopener">' + esc(p.demoLabel || "Visit the live site") + '</a>' : "") +
+      (p.demo || p.photos ? '<div class="proj-actions">' +
+        (p.demo ? '<a class="proj-live" href="' + esc(p.demo) + '" target="_blank" rel="noopener">' + esc(p.demoLabel || "Visit the live site") + '</a>' : "") +
+        (p.photos ? '<button type="button" class="proj-photos" data-gallery="' + (p._gallery || (p._gallery = registerGallery(p.photos))) + '">' + esc(p.photosLabel || "View photos") + "</button>" : "") +
+      "</div>" : "") +
     "</article>";
   };
   var renderProjects = function () {
@@ -149,7 +152,6 @@
     renderProjects();
   });
   searchEl.addEventListener("input", function () { pState.q = searchEl.value.trim(); renderProjects(); });
-  renderProjects();
 
   /* ---------- Coursework timeline ---------- */
   $("#semesters").innerHTML = (window.SEMESTERS || []).map(function (s) {
@@ -193,6 +195,7 @@
     var t = e.target.closest("[data-gallery]"); if (!t) return;
     openGallery(t.dataset.gallery, Number(t.dataset.index || 0));
   });
+  renderProjects(); // after the viewer exists, so project photos can use it
 
   /* ---------- Experience ---------- */
   $("#experience-list").innerHTML = (window.EXPERIENCE || []).map(function (x) {
