@@ -266,8 +266,11 @@ window.EXPERIENCE = [
     org: "Wadi Jeddah Student Club, Wadi Jeddah Innovation Hub",
     logo: "images/logos/wadi-jeddah.webp",
     text: "Accepted as a member of the student club of Wadi Jeddah, the innovation hub powered by King Abdulaziz University.",
-    images: [{ src: "images/experience/wadi-jeddah-acceptance.webp", caption: "Wadi Jeddah Student Club acceptance" }],
-    imagesLabel: "View acceptance"
+    images: [
+      { src: "images/experience/wadi-jeddah-membership-card.webp", caption: "Wadi Jeddah Student Club membership card" },
+      { src: "images/experience/wadi-jeddah-acceptance.webp", caption: "Wadi Jeddah Student Club acceptance" }
+    ],
+    imagesLabel: "View membership card"
   },
   {
     date: "Summer 2026",
