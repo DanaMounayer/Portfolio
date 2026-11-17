@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css?v=202611070210" />
+    <link rel="stylesheet" href="css/style.css?v=202611171530" />
     <script>
       (function () {
         var t = null;
@@ -64,11 +64,12 @@
         <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span><canvas class="waves"></canvas></div>
         <div class="wrap hero-grid">
           <div class="hero-text">
-            <p class="hero-kicker">Effat University, Jeddah</p>
+            <p class="hero-badge"><span class="pulse" aria-hidden="true"></span>Open to AI &amp; Data internships</p>
             <h1 class="hero-name"><span>Dana</span> <span>Al Mounayer</span></h1>
+            <p class="hero-role"><span class="hero-role-fixed">Aspiring AI Engineer</span></p>
             <p class="hero-lede">
-              Artificial Intelligence student specialising in Machine Learning,
-              Deep Learning, NLP, Data Science and Big Data Analytics.
+              Senior Artificial Intelligence student at Effat University, Jeddah,
+              turning raw data into practical, reliable AI, from big-data pipelines to working models.
             </p>
             <div class="hero-actions">
               <a class="btn btn-solid" href="#projects">See my work</a>
@@ -81,7 +82,30 @@
             </dl>
           </div>
           <figure class="hero-photo">
-            <div class="photo-ring"><img src="images/profile-glow.webp" alt="Portrait of Dana Al Mounayer" width="900" height="900" /></div>
+            <div class="orbit">
+              <svg class="orbit-net" viewBox="0 0 400 400" aria-hidden="true">
+                <circle class="orbit-path" cx="200" cy="200" r="190" />
+                <circle class="orbit-path o2" cx="200" cy="200" r="172" />
+                <g class="orbit-lines">
+                  <line x1="200" y1="10" x2="62" y2="70" /><line x1="200" y1="10" x2="338" y2="70" />
+                  <line x1="10" y1="200" x2="62" y2="330" /><line x1="390" y1="200" x2="338" y2="330" />
+                </g>
+                <g class="orbit-nodes">
+                  <circle cx="200" cy="10" r="4" /><circle cx="10" cy="200" r="4" /><circle cx="390" cy="200" r="4" /><circle cx="200" cy="390" r="4" />
+                </g>
+              </svg>
+              <div class="photo-ring"><img src="images/profile.webp" alt="Portrait of Dana Al Mounayer" width="900" height="900" /></div>
+              <ul class="chips" aria-label="Core tools">
+                <li class="chip" style="--a:0deg"><span>Python</span></li>
+                <li class="chip" style="--a:45deg"><span>PyTorch</span></li>
+                <li class="chip c-data" style="--a:90deg"><span>Big Data Analytics</span></li>
+                <li class="chip" style="--a:135deg"><span>NLP &amp; LLMs</span></li>
+                <li class="chip c-data" style="--a:180deg"><span>Apache Spark</span></li>
+                <li class="chip c-extra" style="--a:225deg"><span>TensorFlow</span></li>
+                <li class="chip c-data" style="--a:270deg"><span>HDFS</span></li>
+                <li class="chip c-extra" style="--a:315deg"><span>Data Science</span></li>
+              </ul>
+            </div>
             <figcaption class="social">
               <a class="social-icon" href="https://github.com/DanaMounayer" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
               <a class="social-icon" href="https://www.linkedin.com/in/danamounayer" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
@@ -270,7 +294,7 @@
       </div>
     </dialog>
 
-    <script src="js/data.js?v=202611070210"></script>
-    <script src="js/script.js?v=202611070210"></script>
+    <script src="js/data.js?v=202611171530"></script>
+    <script src="js/script.js?v=202611171530"></script>
   </body>
 </html>
